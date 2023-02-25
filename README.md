@@ -1,45 +1,37 @@
-# valueupProject-front-end
+# MZ2MO-Client
 
 ## 📑 Description
 
-(미정)
-
 ## 🧱 Dependencies
 
--   Typescript (Programming Language)
--   React (SPA)
--   Next.js (SSR)
--   Jotai (Global State)
--   React-query (Server State Management)
--   Styled-components (Styling)
--   Axios (HTTP Client)
--   Husky (Git Hooks)
+- Typescript (Programming Language)
+- Husky (Git Hooks)
+- commitlint, lint-staged (Git Convention)
+- React (SPA)
+- Next.js (SSR)
+- Jotai (Global State)
+- React-query (Server State Management)
+- Styled-components (Styling)
+- Axios (HTTP Client)
+
+## 📂 Structure
+
+```
+/FrontEnd
+    └─ /src
+        └─ /apis
+        └─ /assets
+        └─ /components
+        └─ /constants
+        └─ /hooks
+        └─ /pages
+        └─ /stores
+        └─ /utils
+```
 
 ## ⚙️ Feature
 
--   추후 작성 예정
-
-## 📂 Structure
-```
-/src
-    └─ /apis
-    └─ /assets
-    └─ /components
-    └─ /constants
-    └─ /hooks
-    └─ /pages
-    └─ /stores
-    └─ /utils
-```
-
 ## 💻 Authors
-
--   RookieAND\_ (https://github.com/RookieAND)
-
-## 📝 Version History
-
--   0.1
-    -   프로젝트 시작.
 
 ## 🔐 License
 

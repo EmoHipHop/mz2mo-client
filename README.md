@@ -1,12 +1,5 @@
 # MZ2MO-Client
 
-## Run the development server
-
-```
-yarn
-yarn dev
-```
-
 ## 📑 Description
 
 ## 🧱 Dependencies
@@ -32,13 +25,26 @@ yarn dev
         └─ /constants
         └─ /hooks
         └─ /pages
+        └─ /types
         └─ /stores
         └─ /utils
 ```
 
 ## ⚙️ Feature
 
-## 💻 Authors
+## 💻 Members
+
+|                                    루키                                    |                                    하랭                                    |                                     꾺                                     |                                    메리                                    |                                    밍구                                     |
+| :------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| <img src="https://avatars.githubusercontent.com/u/74497253?v=4" width=150> | <img src="https://avatars.githubusercontent.com/u/64428916?v=4" width=150> | <img src="https://avatars.githubusercontent.com/u/68185554?v=4" width=150> | <img src="https://avatars.githubusercontent.com/u/92949174?v=4" width=150> | <img src="https://avatars.githubusercontent.com/u/112461272?v=4" width=150> |
+|                 [@RookieAND](https://github.com/RookieAND)                 |                    [@halang](https://github.com/halang)                    |                 [@C12H22O12](https://github.com/C12H22O12)                 |             [@Changsoon-Yun](https://github.com/Changsoon-Yun)             |                    [@moomiz](https://github.com/moomiz)                     |
+
+## 💻 Run the development server
+
+```
+yarn
+yarn dev
+```
 
 ## 🔐 License
 

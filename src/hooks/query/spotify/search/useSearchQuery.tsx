@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getAsync } from '@/apis/API';
-import { SEARCH_FOR_ITEM } from '@/constants/apis/spotify';
+import { SEARCH } from '@/constants/apis/spotify';
 
 interface UseSearchQueryProps {
   q: string;
@@ -23,8 +23,8 @@ interface UseSearchQueryProps {
  * @returns useQuery
  */
 const useSearchQuery = (props: UseSearchQueryProps) => {
-  return useQuery([SEARCH_FOR_ITEM, props.q, props.type], () =>
-    getAsync(SEARCH_FOR_ITEM, {
+  return useQuery([SEARCH, props.q, props.type], () =>
+    getAsync(SEARCH, {
       params: {
         ...props,
       },

@@ -1,5 +1,12 @@
 # MZ2MO-Client
 
+## Run the development server
+
+```
+yarn
+yarn dev
+```
+
 ## 📑 Description
 
 ## 🧱 Dependencies

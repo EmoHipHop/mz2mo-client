@@ -38,7 +38,7 @@ export interface ApiError {
  * API 호출 결과 (성공, 실패) 를 나타내는 type
  * @param T 요청 성공 시 인계 받은 데이터 타입
  */
-export type ApiResponse<T> = Promise<
+export type ApiResult<T> = Promise<
   | { isSuccess: true; result: ApiSuccess<T> }
   | { isSuccess: false; result: ApiError }
 >;

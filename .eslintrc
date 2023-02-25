@@ -43,6 +43,8 @@
     "import/extensions": 0,
     "no-unused-vars": "warn",
     "import/prefer-default-export": 0,
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

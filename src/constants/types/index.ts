@@ -1,1 +1,1 @@
-export type { ApiResult, ApiSuccess, ApiError } from './apiTypes';
+export type { ApiResponse, ApiSuccess, ApiError } from './apiTypes';

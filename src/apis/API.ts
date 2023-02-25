@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
 
-import { ApiError, ApiResult, ApiSuccess } from '@/constants/types';
+import { ApiError, ApiResponse, ApiSuccess } from '@/constants/types';
 import { API_URL } from '@/constants/apis';
 
 /**
@@ -56,7 +56,7 @@ function handleApiError(err: unknown): ApiError {
 export async function getAsync<T>(
   url: string,
   config?: AxiosRequestConfig,
-): ApiResult<T> {
+): ApiResponse<T> {
   try {
     const response = await API.get<T, AxiosResponse<ApiSuccess<T>, any>, any>(
       url,
@@ -84,7 +84,7 @@ export async function postAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-): ApiResult<T> {
+): ApiResponse<T> {
   try {
     const response = await API.post<T, AxiosResponse<ApiSuccess<T>, D>, D>(
       url,
@@ -113,7 +113,7 @@ export async function patchAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-): ApiResult<T> {
+): ApiResponse<T> {
   try {
     const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, D>, D>(
       url,
@@ -140,7 +140,7 @@ export async function patchAsync<T, D>(
 export async function deleteAsync<T>(
   url: string,
   config?: AxiosRequestConfig,
-): ApiResult<T> {
+): ApiResponse<T> {
   try {
     const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, any>, any>(
       url,

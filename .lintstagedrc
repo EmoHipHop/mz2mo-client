@@ -1,0 +1,3 @@
+{
+  "src/**/*.[jt]s?(x)": "eslint --cache --fix"
+}

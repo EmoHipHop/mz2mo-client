@@ -22,13 +22,27 @@ interface UseSearchQueryProps {
  * @param offset 검색 결과의 시작 위치
  * @returns useQuery
  */
-const useSearchQuery = (props: UseSearchQueryProps) => {
-  return useQuery([SEARCH, props.q, props.type], () =>
-    getAsync(SEARCH, {
-      params: {
-        ...props,
+const useSearchQuery = ({
+  q,
+  type,
+  includeExternal,
+  limit,
+  market,
+  offset,
+}: UseSearchQueryProps) => {
+  return useQuery([SEARCH, q, type], () =>
+    getAsync(
+      `${SEARCH}${includeExternal && `?include_external=${includeExternal}`}`,
+      {
+        params: {
+          q,
+          type,
+          limit,
+          market,
+          offset,
+        },
       },
-    }),
+    ),
   );
 };
 

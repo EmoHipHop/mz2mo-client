@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
 
-import { ApiError, ApiSuccess } from '@/constants/types';
+import { ApiError, ApiSuccess } from '@/types/apiTypes';
 import { API_URL } from '@/constants/apis';
 
 /**

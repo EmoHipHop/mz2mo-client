@@ -6,7 +6,7 @@ import { redirectToSpotifyAuth } from '@/apis/spotify';
 
 const Home = () => {
   useEffect(() => {
-    redirectToSpotifyAuth();
+    // redirectToSpotifyAuth();
   });
 
   return (
@@ -18,7 +18,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <title>MZ2MO : 음악의 세계를 열다</title>
       </Head>
-      <WebPlayers />
+      {/* <WebPlayers /> */}
     </>
   );
 };

@@ -31,7 +31,7 @@ const useStartAndResumePlaybackMutation = ({
   return useMutation([START_AND_RESUME], () =>
     putAsync(`${SPOTIFY_API_URL}${START_AND_RESUME}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
-      params: {
+      query: {
         device_id: deviceId,
       },
       body: {

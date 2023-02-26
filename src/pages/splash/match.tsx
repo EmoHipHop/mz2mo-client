@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SplashMainTemplate from '~/src/components/Template/splash/SplashMainTemplate';
+import { SplashMatchedTemplate } from '~/src/components/Template/splash';
 
 const Header = styled.header`
   height: 85px;
@@ -8,13 +8,13 @@ const Header = styled.header`
   width: 100%;
 `;
 
-const Splash = () => {
+const match = () => {
   return (
     <>
       <Header>Header</Header>
-      <SplashMainTemplate />
+      <SplashMatchedTemplate />
     </>
   );
 };
 
-export default Splash;
+export default match;

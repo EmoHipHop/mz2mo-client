@@ -5,3 +5,4 @@ export const CURRENTLY_PLAYING = `${PLAYER}/currently-playing`;
 export const START_AND_RESUME = `${PLAYER}/play`;
 export const PAUSE = `${PLAYER}/pause`;
 export const SKIP_TO_NEXT = `${PLAYER}/next`;
+export const SKIP_TO_PREVIOUS = `${PLAYER}/previous`;

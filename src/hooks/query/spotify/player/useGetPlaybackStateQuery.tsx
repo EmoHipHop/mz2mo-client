@@ -4,7 +4,7 @@ import { getAsync } from '@/apis/API';
 import { PLAYER } from '@/constants/apis/spotify';
 import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
-interface UseGetTrackQueryProps {
+interface UseGetPlaybackStateProps {
   additionalTypes?: string;
   market?: string;
 }
@@ -18,7 +18,7 @@ interface UseGetTrackQueryProps {
 const useGetPlaybackStateQuery = ({
   additionalTypes,
   market,
-}: UseGetTrackQueryProps) => {
+}: UseGetPlaybackStateProps) => {
   return useQuery([PLAYER], () =>
     getAsync(`${SPOTIFY_API_URL}${PLAYER}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token

@@ -4,7 +4,7 @@ import { getAsync } from '@/apis/API';
 import { TRACKS } from '@/constants/apis/spotify';
 import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
-interface UseGetTrackQueryProps {
+interface UseTrackQueryProps {
   id: string;
   market?: string;
 }
@@ -15,7 +15,7 @@ interface UseGetTrackQueryProps {
  * @param market 국가 코드
  * @returns useQuery
  */
-const useGetTrackQuery = ({ id, market }: UseGetTrackQueryProps) => {
+const useTrackQuery = ({ id, market }: UseTrackQueryProps) => {
   return useQuery([TRACKS, id], () =>
     getAsync(`${SPOTIFY_API_URL}${TRACKS}/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
@@ -26,4 +26,4 @@ const useGetTrackQuery = ({ id, market }: UseGetTrackQueryProps) => {
   );
 };
 
-export default useGetTrackQuery;
+export default useTrackQuery;

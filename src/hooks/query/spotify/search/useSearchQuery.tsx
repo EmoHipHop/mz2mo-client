@@ -33,7 +33,9 @@ const useSearchQuery = ({
 }: UseSearchQueryProps) => {
   return useQuery([SEARCH, q, type], () =>
     getAsync(`${SPOTIFY_API_URL}${SEARCH}`, {
-      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('spotify_token')}`,
+      }, // TODO: fix get spotify token
       params: {
         q,
         type,

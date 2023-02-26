@@ -4,7 +4,7 @@ import { getAsync } from '@/apis/API';
 import { PLAYER } from '@/constants/apis/spotify';
 import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
-interface UseGetPlaybackStateProps {
+interface UsePlaybackStateProps {
   additionalTypes?: string;
   market?: string;
 }
@@ -15,10 +15,10 @@ interface UseGetPlaybackStateProps {
  * @param market 국가 코드
  * @returns useQuery
  */
-const useGetPlaybackStateQuery = ({
+const usePlaybackStateQuery = ({
   additionalTypes,
   market,
-}: UseGetPlaybackStateProps) => {
+}: UsePlaybackStateProps) => {
   return useQuery([PLAYER], () =>
     getAsync(`${SPOTIFY_API_URL}${PLAYER}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
@@ -30,4 +30,4 @@ const useGetPlaybackStateQuery = ({
   );
 };
 
-export default useGetPlaybackStateQuery;
+export default usePlaybackStateQuery;

@@ -1,4 +1,5 @@
 import { putAsync } from '@/apis/API';
+import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
 export const sdkPlayerSkipTrack = async (
   type: 'previous' | 'next',
@@ -6,7 +7,7 @@ export const sdkPlayerSkipTrack = async (
   token: string,
 ): Promise<boolean> => {
   const response = await putAsync<null, null>(`/me/player/${type}`, null, {
-    baseURL: 'https://api.spotify.com/v1',
+    baseURL: SPOTIFY_API_URL,
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
@@ -29,7 +30,7 @@ export const sdkPlayerPlayTrack = async (
       uris,
     },
     {
-      baseURL: 'https://api.spotify.com/v1',
+      baseURL: SPOTIFY_API_URL,
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
@@ -47,7 +48,7 @@ export const sdkPlayerPauseTrack = async (
   token: string,
 ): Promise<boolean> => {
   const response = await putAsync<null, null>(`/me/player/pause`, null, {
-    baseURL: 'https://api.spotify.com/v1',
+    baseURL: SPOTIFY_API_URL,
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,

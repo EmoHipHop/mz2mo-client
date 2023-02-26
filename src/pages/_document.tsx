@@ -45,7 +45,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <SoundNav />
         </body>
       </Html>
     );

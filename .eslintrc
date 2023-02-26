@@ -26,6 +26,31 @@
     }
   },
   "rules": {
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/await-thenable": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "arrow-body-style": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "no-restricted-globals": "off",
+    "no-restricted-syntax": "off",
+    "no-nested-ternary": "off",
+    "no-unused-vars": "off",
+    "import/no-cycle": "off",
+    "import/extensions": ["off"],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-default-export": "off",
+    "import/prefer-default-export": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -38,13 +63,21 @@
         "namedComponents": "arrow-function"
       }
     ],
-    "import/no-extraneous-dependencies": 0,
-    "import/extensions": 0,
-    "import/prefer-default-export": 0,
-    "no-unused-vars": "warn",
-    "arrow-body-style": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/require-default-props": 0,
+    "react/self-closing-comp": "error",
+    "react/no-unescaped-entities": "off",
+    "react/no-array-index-key": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-uses-react": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": [
+      "error",
+      {
+        "ignoreFunctionalComponents": true
+      }
+    ],
     "react/jsx-wrap-multilines": "off",
     "react/jsx-props-no-spreading": "off"
   }

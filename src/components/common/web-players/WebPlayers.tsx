@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAtomValue } from 'jotai';
 
-import { sdkPlayerPlayTrack, sdkPlayerPauseTrack } from '~/src/utils/spotify';
+import { sdkPlayerPlayTrack, sdkPlayerPauseTrack } from '@/utils/spotify';
 import { setSpotifyTokenAtom } from '@/stores/actions';
 
 interface WebPlaybackPlayer {
@@ -9,7 +9,9 @@ interface WebPlaybackPlayer {
 }
 
 const WebPlayers = () => {
-  const [spotifyPlayer, setSpotifyPlayer] = useState(null);
+  const [spotifyPlayer, setSpotifyPlayer] = useState<
+    typeof window.Spotify.Player | null
+  >(null);
   const [deviceId, setDeviceId] = useState('');
   const spotifyToken = useAtomValue(setSpotifyTokenAtom);
 
@@ -61,7 +63,6 @@ const WebPlayers = () => {
       <p>SDK Player</p>
       <button onClick={onPlay}>play Song</button>
       <button onClick={onPause}>pause Song</button>
-      <button>resume Song</button>
     </div>
   );
 };

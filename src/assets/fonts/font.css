@@ -33,3 +33,15 @@
   font-weight: 100;
   src: url("../../assets/fonts/Pretendard-Thin.woff") format("woff");
 }
+
+@font-face {
+  font-family: ClimateCrisis;
+  font-weight: 400;
+  src: url("../../assets/fonts/ClimateCrisis-Regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: ChangwonDangamAsac;
+  font-weight: 700;
+  src: url("../../assets/fonts/ChangwonDangamAsac-Bold.ttf") format("woff");
+}

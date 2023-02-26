@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { getAsync } from '@/apis/API';
 import { SEARCH } from '@/constants/apis/spotify';
+import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
 interface UseSearchQueryProps {
   q: string;
@@ -32,7 +33,9 @@ const useSearchQuery = ({
 }: UseSearchQueryProps) => {
   return useQuery([SEARCH, q, type], () =>
     getAsync(
-      `${SEARCH}${includeExternal && `?include_external=${includeExternal}`}`,
+      `${SPOTIFY_API_URL}${SEARCH}${
+        includeExternal && `?include_external=${includeExternal}`
+      }`,
       {
         params: {
           q,

@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { getAsync } from '@/apis/API';
 import { TRACKS } from '@/constants/apis/spotify';
+import { SPOTIFY_API_URL } from '@/constants/apis/server';
 
 interface UseGetTrackQueryProps {
   id: string;
@@ -16,7 +17,7 @@ interface UseGetTrackQueryProps {
  */
 const useGetTrackQuery = ({ id, market }: UseGetTrackQueryProps) => {
   return useQuery([TRACKS, id], () =>
-    getAsync(`${TRACKS}/${id}`, {
+    getAsync(`${SPOTIFY_API_URL}${TRACKS}/${id}`, {
       params: {
         market,
       },

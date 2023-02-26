@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAtomValue } from 'jotai';
 
-import { play, pause } from '@/apis/spotify';
+import { sdkPlayerPlayTrack, sdkPlayerPauseTrack } from '~/src/utils/spotify';
 import { setSpotifyTokenAtom } from '@/stores/actions';
 
 interface WebPlaybackPlayer {
@@ -13,17 +13,17 @@ const WebPlayers = () => {
   const [deviceId, setDeviceId] = useState('');
   const spotifyToken = useAtomValue(setSpotifyTokenAtom);
 
-  const onPlay = (uri: string) => {
-    play({
-      spotifyUri: uri,
-      deviceId,
-      position: 0,
-      playerInstance: spotifyPlayer,
-    });
+  const onPlay = async () => {
+    if (spotifyToken)
+      sdkPlayerPlayTrack(
+        ['spotify:track:7eBpUuPnDTfbeP1P4P93CS'],
+        deviceId,
+        spotifyToken,
+      );
   };
 
   const onPause = () => {
-    pause({ deviceId, playerInstance: spotifyPlayer });
+    if (spotifyToken) sdkPlayerPauseTrack(deviceId, spotifyToken);
   };
 
   useEffect(() => {
@@ -51,16 +51,17 @@ const WebPlayers = () => {
       };
     };
 
-    if (spotifyToken !== null) connectToSpotify(spotifyToken);
+    if (spotifyToken !== null) {
+      connectToSpotify(spotifyToken);
+    }
   }, [spotifyToken]);
 
   return (
     <div>
       <p>SDK Player</p>
-      <button onClick={() => onPlay('spotify:track:7eBpUuPnDTfbeP1P4P93CS')}>
-        play Song
-      </button>
+      <button onClick={onPlay}>play Song</button>
       <button onClick={onPause}>pause Song</button>
+      <button>resume Song</button>
     </div>
   );
 };

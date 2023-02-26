@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
 
-import { ApiError, ApiSuccess } from '@/types/apiTypes';
+import { ApiError, ApiResult, ApiSuccess } from '@/types/apiTypes';
 import { API_URL } from '@/constants/apis';
 
 /**
@@ -53,7 +53,10 @@ function handleApiError(err: unknown): ApiError {
  * @param config API 요청과 관련된 config (AxiosRequestConfig)
  * @returns API 요청 성공과 실패에 따른 객체 (APIResponse)
  */
-export async function getAsync<T>(url: string, config?: AxiosRequestConfig) {
+export async function getAsync<T>(
+  url: string,
+  config?: AxiosRequestConfig,
+): ApiResult<T> {
   try {
     const response = await API.get<T, AxiosResponse<ApiSuccess<T>, any>, any>(
       url,
@@ -81,7 +84,10 @@ export async function postAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-) {
+): Promise<
+  | { isSuccess: true; result: ApiSuccess<T> }
+  | { isSuccess: false; result: ApiError }
+> {
   try {
     const response = await API.post<T, AxiosResponse<ApiSuccess<T>, D>, D>(
       url,
@@ -110,7 +116,10 @@ export async function patchAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-) {
+): Promise<
+  | { isSuccess: true; result: ApiSuccess<T> }
+  | { isSuccess: false; result: ApiError }
+> {
   try {
     const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, D>, D>(
       url,
@@ -134,7 +143,13 @@ export async function patchAsync<T, D>(
  * @param config Api 요청과 관련된 config (AxiosRequestConfig)
  * @returns Api 요청 성공과 실패에 따른 객체 (ApiResponse)
  */
-export async function deleteAsync<T>(url: string, config?: AxiosRequestConfig) {
+export async function deleteAsync<T>(
+  url: string,
+  config?: AxiosRequestConfig,
+): Promise<
+  | { isSuccess: true; result: ApiSuccess<T> }
+  | { isSuccess: false; result: ApiError }
+> {
   try {
     const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, any>, any>(
       url,

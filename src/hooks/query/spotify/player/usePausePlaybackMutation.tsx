@@ -19,7 +19,7 @@ const usePausePlaybackMutation = ({
   return useMutation([PAUSE, deviceId], () =>
     putAsync(`${SPOTIFY_API_URL}${PAUSE}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
-      query: {
+      params: {
         device_id: deviceId,
       },
     }),

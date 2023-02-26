@@ -26,12 +26,17 @@ const fontWeight = {
 };
 
 const fontSize = {
-  sm: '14px',
-  base: '16px',
-  lg: '24px',
-  xl: '32px',
-  xxl: '48px',
-  title: '96px',
+  buttonSmall: '12px',
+  buttonMedium: '14px',
+  buttonLarge: '16px',
+  body3: '18px',
+  body2: '20px',
+  body1: '22px',
+  Heading5: '26px',
+  Heading4: '34px',
+  Heading3: '42px',
+  Heading2: '50px',
+  Heading1: '66px',
 };
 
 const fonts = {

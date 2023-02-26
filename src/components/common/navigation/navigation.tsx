@@ -60,7 +60,7 @@ const Navigation = () => {
     <NavBody>
       <LogoArea>
         <Image
-          src="/assets/icons/logo.svg"
+          src="/icons/logo.svg"
           width={153}
           height={40}
           layout="responsive"
@@ -79,7 +79,7 @@ const Navigation = () => {
           </MenuItem>
           <Hambuger>
             <Image
-              src="/assets/icons/menu.svg"
+              src="/icons/menu.svg"
               width={30}
               height={30}
               layout="responsive"

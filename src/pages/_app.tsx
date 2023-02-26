@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@/constants/styles/globalStyle';
 import { theme } from '@/constants/styles/theme';
-import 'public/assets/fonts/font.css';
+import '@/assets/fonts/font.css';
 
 import Navigation from '../components/common/navigation/navigation';
 

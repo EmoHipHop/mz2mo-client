@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { theme } from '@/constants/styles/theme';
 import Image from 'next/image';
 
 const NavBody = styled.div`

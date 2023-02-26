@@ -18,6 +18,7 @@ interface UseGetTrackQueryProps {
 const useGetTrackQuery = ({ id, market }: UseGetTrackQueryProps) => {
   return useQuery([TRACKS, id], () =>
     getAsync(`${SPOTIFY_API_URL}${TRACKS}/${id}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
       params: {
         market,
       },

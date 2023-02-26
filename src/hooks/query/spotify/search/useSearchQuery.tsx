@@ -37,6 +37,7 @@ const useSearchQuery = ({
         includeExternal && `?include_external=${includeExternal}`
       }`,
       {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
         params: {
           q,
           type,

@@ -8,3 +8,4 @@ export const SKIP_TO_NEXT = `${PLAYER}/next`;
 export const SKIP_TO_PREVIOUS = `${PLAYER}/previous`;
 export const SEEK_TO_POSITION = `${PLAYER}/seek`;
 export const VOLUME = `${PLAYER}/volume`;
+export const QUEUE = `${PLAYER}/queue`;

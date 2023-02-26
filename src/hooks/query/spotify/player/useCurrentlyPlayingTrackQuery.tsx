@@ -10,7 +10,7 @@ interface UseCurrentlyPlayingTrackQueryProps {
 }
 
 /**
- * user의 현재 재생 상태를 가져오는 Hook
+ * user의 현재 재생중인 object를 가져오는 Hook
  * @param additionalTypes track, episode 타입만 지원
  * @param market 국가 코드
  * @returns useQuery

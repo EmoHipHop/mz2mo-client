@@ -103,6 +103,38 @@ export async function postAsync<T, D>(
 }
 
 /**
+ * PUT 요청을 처리하는 유틸 API 함수 putAsync
+ * @param T 요청 결과로 받을 데이터의 타입
+ * @param D API 요청 시 서버에 전송할 데이터의 타입
+ *
+ * @param url API 요청을 보낼 url (string)
+ * @param data API 요청과 함께 동봉할 data
+ * @param config API 요청과 관련된 config (AxiosRequestConfig)
+ * @returns API 요청 성공과 실패에 따른 객체 (ApiResponse)
+ */
+export async function putAsync<T, D>(
+  url: string,
+  data: D,
+  config?: AxiosRequestConfig,
+): Promise<
+  | { isSuccess: true; result: ApiSuccess<T> }
+  | { isSuccess: false; result: ApiError }
+> {
+  try {
+    const response = await API.put<T, AxiosResponse<ApiSuccess<T>, D>, D>(
+      url,
+      data,
+      {
+        ...config,
+      },
+    );
+    return { isSuccess: true, result: response.data };
+  } catch (err) {
+    return { isSuccess: false, result: handleApiError(err) };
+  }
+}
+
+/**
  * PATCH 요청을 처리하는 유틸 API 함수 patchAsync
  * @param T 요청 결과로 받을 데이터의 타입
  * @param D API 요청 시 서버에 전송할 데이터의 타입

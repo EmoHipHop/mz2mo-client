@@ -1,6 +1,6 @@
 import { atom } from 'jotai';
 import type { AuthTokenType } from './atoms';
-import { jwtTokenAtom } from './atoms';
+import { jwtTokenAtom, spotifyTokenAtom } from './atoms';
 
 export const setJwtTokenAtom = atom(
   (get) => {
@@ -10,5 +10,14 @@ export const setJwtTokenAtom = atom(
   (get, set, newAccessToken: AuthTokenType) => {
     const prevTokenData = get(jwtTokenAtom);
     set(jwtTokenAtom, { ...prevTokenData, ...newAccessToken });
+  },
+);
+
+export const setSpotifyTokenAtom = atom(
+  (get) => {
+    return get(spotifyTokenAtom);
+  },
+  (get, set, newAccessToken: string | null) => {
+    set(spotifyTokenAtom, newAccessToken);
   },
 );

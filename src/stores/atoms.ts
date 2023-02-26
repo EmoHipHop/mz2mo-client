@@ -9,3 +9,8 @@ export const jwtTokenAtom = atomWithStorage<AuthTokenType>('jwt', {
   accessToken: null,
   refreshToken: null,
 });
+
+export const spotifyTokenAtom = atomWithStorage<string | null>(
+  'spotify_token',
+  null,
+);

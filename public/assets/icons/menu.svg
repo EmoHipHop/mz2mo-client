@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="current" viewBox="0 96 960 960" width="current"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<path d="M6 36V33H42V36H6ZM6 25.5V22.5H42V25.5H6ZM6 15V12H42V15H6Z" fill="#FAFAFA"/>
+</g>
+</svg>

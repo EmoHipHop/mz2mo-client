@@ -7,6 +7,7 @@ import Document, {
   DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import SoundNav from '../components/common/sound-player/SoundNav';
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -44,6 +45,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <SoundNav />
         </body>
       </Html>
     );

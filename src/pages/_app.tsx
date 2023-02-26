@@ -7,7 +7,9 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@/constants/styles/globalStyle';
 import { theme } from '@/constants/styles/theme';
-import '@/assets/fonts/font.css';
+import 'public/assets/fonts/font.css';
+
+import Navigation from '../components/common/navigation/navigation';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [queryClient] = useState(
@@ -28,6 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
+          <Navigation />
         </ThemeProvider>
       </Provider>
     </QueryClientProvider>

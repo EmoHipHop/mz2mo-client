@@ -1,16 +1,4 @@
 /**
- * API 호출로 서버에서 받은 데이터와 관련된 interface
- */
-export interface ApiSuccess<T> {
-  /** 백엔드 측에서 전송한 HTTP Status Code */
-  code: number;
-  /** 백엔드 측에서 전송한 응답 메세지 */
-  msg: string;
-  /** 백엔드 측에서 전송한 응답 데이터 */
-  data?: T;
-}
-
-/**
  * API 호출 과정에서 발생한 에러 정보 관련 interface
  */
 interface ApiErrorFieldData {
@@ -39,6 +27,5 @@ export interface ApiError {
  * @param T 요청 성공 시 인계 받은 데이터 타입
  */
 export type ApiResult<T> = Promise<
-  | { isSuccess: true; result: ApiSuccess<T> }
-  | { isSuccess: false; result: ApiError }
+  { isSuccess: true; result: T } | { isSuccess: false; result: ApiError }
 >;

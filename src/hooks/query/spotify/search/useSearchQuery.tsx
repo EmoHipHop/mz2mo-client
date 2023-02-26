@@ -32,21 +32,17 @@ const useSearchQuery = ({
   offset,
 }: UseSearchQueryProps) => {
   return useQuery([SEARCH, q, type], () =>
-    getAsync(
-      `${SPOTIFY_API_URL}${SEARCH}${
-        includeExternal && `?include_external=${includeExternal}`
-      }`,
-      {
-        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
-        params: {
-          q,
-          type,
-          limit,
-          market,
-          offset,
-        },
+    getAsync(`${SPOTIFY_API_URL}${SEARCH}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }, // TODO: fix get token
+      params: {
+        q,
+        type,
+        include_external: includeExternal,
+        limit,
+        market,
+        offset,
       },
-    ),
+    }),
   );
 };
 

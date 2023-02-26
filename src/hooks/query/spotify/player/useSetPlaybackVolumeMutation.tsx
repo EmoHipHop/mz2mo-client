@@ -10,7 +10,7 @@ interface UseSetPlaybackVolumeMutationProps {
 }
 
 /**
- * 재생 위치를 이동하는 Hook
+ * user의 재생중인 음악의 볼륨을 조절하는 Hook
  * @param volumePercent 볼륨 크기 (0 ~ 100)
  * @param deviceId 기기 id
  * @returns useMutation

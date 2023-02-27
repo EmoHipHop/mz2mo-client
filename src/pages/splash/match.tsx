@@ -1,19 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import BaseTemplates from '@/components/templates/BaseTemplates';
 import MatchedTemplate from '@/components/Template/splash/matched';
-
-const Header = styled.header`
-  height: 85px;
-  background-color: ${({ theme }) => theme.colors.Darkmode.background};
-  width: 100%;
-`;
 
 const Match = () => {
   return (
-    <>
-      <Header>Header</Header>
+    <BaseTemplates>
       <MatchedTemplate />
-    </>
+    </BaseTemplates>
   );
 };
 

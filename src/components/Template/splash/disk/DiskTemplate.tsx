@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import React from 'react';
+import { useRouter } from 'next/router';
+
 import * as style from './DiskTemplate.style';
 
 const DiskTemplate = () => {
+  const router = useRouter();
   return (
     <style.Main>
       <style.TitleWrapper>
@@ -108,7 +110,7 @@ const DiskTemplate = () => {
           </style.EmojiItem>
         </style.EmojiList>
       </style.EmojisWrapper>
-      <style.BottomButton>
+      <style.BottomButton onClick={() => router.push('/splash/match')}>
         내가 선택한 이모지에 맞는 음악 들으러 가기 &gt;&gt;
       </style.BottomButton>
     </style.Main>

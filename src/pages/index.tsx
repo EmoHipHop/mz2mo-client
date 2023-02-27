@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import MainTemplates from '@/components/templates/MainTemplates';
+
+import BaseTemplates from '@/components/templates/BaseTemplates';
+import MainTemplate from '@/components/Template/splash/main';
 
 const Home = () => {
   return (
@@ -11,9 +13,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <title>MZ2MO : 음악의 세계를 열다</title>
       </Head>
-      <MainTemplates>
-        <h5>Main Page</h5>
-      </MainTemplates>
+      <BaseTemplates>
+        <MainTemplate />
+      </BaseTemplates>
     </>
   );
 };

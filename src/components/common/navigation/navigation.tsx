@@ -17,15 +17,19 @@ const Navigation = () => {
       <style.MenuList>
         <style.MenuLinks>
           <style.MenuItem>
-            <style.MenuText>가입하기</style.MenuText>
+            <style.MenuText onClick={() => alert('준비 중인 기능입니다.')}>
+              가입하기
+            </style.MenuText>
           </style.MenuItem>
           <style.MenuItem>
             <style.MenuText>|</style.MenuText>
           </style.MenuItem>
-          <style.MenuItem onClick={redirectToSpotifyAuth}>
-            <style.MenuText>로그인</style.MenuText>
+          <style.MenuItem>
+            <style.MenuText onClick={() => alert('준비 중인 기능입니다.')}>
+              로그인
+            </style.MenuText>
           </style.MenuItem>
-          <style.Hambuger>
+          <style.Hambuger onClick={() => alert('준비 중인 기능입니다.')}>
             <Image
               src="/icons/menu.svg"
               width={30}

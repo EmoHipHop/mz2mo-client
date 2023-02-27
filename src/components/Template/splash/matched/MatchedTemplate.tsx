@@ -124,7 +124,7 @@ const MatchedTemplate = () => {
         </style.DiskList>
       </style.DiskWrapper>
       <style.EmojisWrapper>
-        <style.EmojiTitle>
+        <style.EmojiTitle onClick={() => alert('추후 구현될 기능입니다.')}>
           이 음악이 다른 이모지와 더 어울리나요?
         </style.EmojiTitle>
         <style.EmojiList>
@@ -180,7 +180,9 @@ const MatchedTemplate = () => {
           </style.EmojiItem>
         </style.EmojiList>
       </style.EmojisWrapper>
-      <style.BottomButton>회원가입/로그인 하기</style.BottomButton>
+      <style.BottomButton onClick={() => alert('추후 구현될 기능입니다.')}>
+        회원가입/로그인 하기
+      </style.BottomButton>
     </style.Main>
   );
 };

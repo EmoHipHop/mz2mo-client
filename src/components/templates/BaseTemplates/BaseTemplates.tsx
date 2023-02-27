@@ -1,13 +1,13 @@
 import Navigation from '@/components/common/navigation/navigation';
 import WebPlayers from '@/components/common/web-players/WebPlayers';
 
-import * as style from './MainTemplates.style';
+import * as style from './BaseTemplates.style';
 
-type MainTemplatesProps = {
+type BaseTemplatesProps = {
   children: React.ReactNode;
 };
 
-const MainTemplates = ({ children }: MainTemplatesProps) => {
+const BaseTemplates = ({ children }: BaseTemplatesProps) => {
   return (
     <style.Wrapper>
       <Navigation />
@@ -17,4 +17,4 @@ const MainTemplates = ({ children }: MainTemplatesProps) => {
   );
 };
 
-export default MainTemplates;
+export default BaseTemplates;

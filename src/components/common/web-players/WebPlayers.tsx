@@ -30,7 +30,7 @@ const WebPlayers = () => {
   const onPlay = () => {
     if (spotifyToken)
       sdkPlayerPlayTrack(
-        ['spotify:track:7eBpUuPnDTfbeP1P4P93CS'],
+        ['spotify:track:0Q5VnK2DYzRyfqQRJuUtvi'],
         deviceId,
         spotifyToken,
         sdkStatus.position,

@@ -1,14 +1,7 @@
 import Head from 'next/head';
-import WebPlayers from '@/components/web-players/WebPlayers';
-
-import { useEffect } from 'react';
-import { redirectToSpotifyAuth } from '@/apis/spotify';
+import MainTemplates from '@/components/templates/MainTemplates';
 
 const Home = () => {
-  useEffect(() => {
-    // redirectToSpotifyAuth();
-  });
-
   return (
     <>
       <Head>
@@ -18,7 +11,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <title>MZ2MO : 음악의 세계를 열다</title>
       </Head>
-      {/* <WebPlayers /> */}
+      <MainTemplates>
+        <h5>Main Page</h5>
+      </MainTemplates>
     </>
   );
 };

@@ -1,22 +1,27 @@
+/** @type {import('next').NextConfig} */
+
 module.exports = {
   reactStrictMode: true,
-  webpack: (config, options) => {
+  webpack(config) {
+    // remove .svg from next-image-loader
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test('.svg'),
+    );
+    fileLoaderRule.exclude = /\.svg$/;
+
     config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
-    });
-    config.module.rules.push({
-      test: /\.(wav|mp3)$/,
-      use: {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          publicPath: `/_next/static/sounds/`,
-          outputPath: `${options.isServer ? "../" : ""}static/sounds/`,
+      loader: '@svgr/webpack',
+      options: {
+        prettier: false,
+        svgo: true,
+        svgoConfig: {
+          plugins: [{ removeViewBox: false }],
         },
+        titleProp: true,
       },
+      test: /\.svg$/,
     });
+
     return config;
   },
 };

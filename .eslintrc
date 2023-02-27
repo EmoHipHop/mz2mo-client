@@ -46,6 +46,7 @@
     "no-restricted-syntax": "off",
     "no-nested-ternary": "off",
     "no-unused-vars": "off",
+    "no-undef": "off",
     "import/no-cycle": "off",
     "import/extensions": ["off"],
     "import/no-extraneous-dependencies": "off",

@@ -8,6 +8,9 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@/constants/styles/globalStyle';
 import { theme } from '@/constants/styles/theme';
 import '@/assets/fonts/font.css';
+import ModalPortal from '@/components/common/modal/modal-portal';
+
+import Navigation from '../components/common/navigation/navigation';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [queryClient] = useState(
@@ -27,7 +30,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Provider>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
+          <ModalPortal />
           <Component {...pageProps} />
+          <Navigation />
         </ThemeProvider>
       </Provider>
     </QueryClientProvider>

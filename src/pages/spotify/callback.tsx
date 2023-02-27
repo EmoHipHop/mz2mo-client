@@ -15,7 +15,7 @@ const SpotifyCallback = () => {
     const getSpotifyToken = async () => {
       const spotifyToken = await getSpotifyAccessToken(code);
       setSpotifyToken(spotifyToken);
-      router.push('/player');
+      router.push('/');
     };
 
     getSpotifyToken();

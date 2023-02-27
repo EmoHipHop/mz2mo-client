@@ -5,7 +5,7 @@ const colors = {
     primary: '#FAFAFA',
     sub: '#F8F9FB',
     click: '#EDEDEF',
-    none: '#7E7D85'
+    none: '#7E7D85',
   },
   Accent: {
     main: '#6E56CF',
@@ -19,12 +19,13 @@ const colors = {
     boxinput: '#232325',
     highlight: '#ECECEE',
     default: '#7D7C81',
-  }
+  },
 };
 
 const fontWeight = {
   light: 200,
   normal: 400,
+  semiBold: 600,
   bold: 700,
 };
 

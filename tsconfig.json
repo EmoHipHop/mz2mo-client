@@ -12,7 +12,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "removeComments": true,
-    "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
@@ -22,14 +21,14 @@
       "@/apis/*": ["./src/apis/*"],
       "@/components/*": ["./src/components/*"],
       "@/constants/*": ["./src/constants/*"],
+      "@/data/*": ["./src/data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/stores/*": ["./src/stores/*"],
       "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/data/*": ["./src/data/*"]
+      "@/utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["global.d.ts", "**/*.ts", "**/*.tsx", "next-env.d.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import { SplashDiskTemplate } from '~/src/components/Template/splash';
+import DiskTemplate from '@/components/Template/splash/matched';
 
 const Header = styled.header`
   height: 85px;
@@ -13,7 +12,7 @@ const SplashGenre = () => {
   return (
     <>
       <Header />
-      <SplashDiskTemplate />
+      <DiskTemplate />
     </>
   );
 };

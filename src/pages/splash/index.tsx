@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SplashMainTemplate from '~/src/components/Template/splash/SplashMainTemplate';
+import MainTemplate from '@/components/Template/splash/main/MainTemplate';
 
 const Header = styled.header`
   height: 85px;
@@ -12,7 +12,7 @@ const Splash = () => {
   return (
     <>
       <Header>Header</Header>
-      <SplashMainTemplate />
+      <MainTemplate />
     </>
   );
 };

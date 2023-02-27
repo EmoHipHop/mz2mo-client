@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import * as style from './SplashMatchedTemplate.style';
+import * as style from './MatchedTemplate.style';
 
-const SplashMatchedTemplate = () => {
+const MatchedTemplate = () => {
   return (
     <style.Main>
       <style.TitleWrapper>
@@ -73,4 +73,4 @@ const SplashMatchedTemplate = () => {
   );
 };
 
-export default SplashMatchedTemplate;
+export default MatchedTemplate;

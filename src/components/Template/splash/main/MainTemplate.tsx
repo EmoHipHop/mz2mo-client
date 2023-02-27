@@ -1,7 +1,7 @@
 import React from 'react';
-import * as style from './SplashMainTemplate.style';
+import * as style from './MainTemplate.style';
 
-const SplashMainTemplate = () => {
+const MainTemplate = () => {
   return (
     <style.Main>
       <style.Logo />
@@ -18,4 +18,4 @@ const SplashMainTemplate = () => {
   );
 };
 
-export default SplashMainTemplate;
+export default MainTemplate;

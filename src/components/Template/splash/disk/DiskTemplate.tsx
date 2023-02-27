@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import * as style from './SplashDiskTemplate.style';
+import * as style from './DiskTemplate.style';
 
-const SplashDiskTemplate = () => {
+const DiskTemplate = () => {
   return (
     <style.Main>
       <style.TitleWrapper>
@@ -115,4 +115,4 @@ const SplashDiskTemplate = () => {
   );
 };
 
-export default SplashDiskTemplate;
+export default DiskTemplate;

@@ -1,20 +1,26 @@
 import { useEffect, useState } from 'react';
 import { useAtomValue } from 'jotai';
+import Image from 'next/image';
 
+import { redirectToSpotifyAuth } from '@/apis/spotify';
 import { setSpotifyTokenAtom } from '@/stores/actions';
 import { SdkStatusTypes } from '@/types/spotifyTypes';
 import {
   sdkPlayerPlayTrack,
   sdkPlayerPauseTrack,
   sdkPlayerSetRepeat,
+  sdkPlayerSkipTrack,
 } from '@/utils/spotify';
+
+import { dummyEmoji } from '@/data/dummyEmoji';
+import * as style from './WebPlayers.styles';
 
 const WebPlayers = () => {
   const [deviceId, setDeviceId] = useState('');
   const [sdkPlayer, setSdkPlayer] = useState<Spotify.Player | null>(null);
   const [currentTrack, setCurrentTrack] = useState<Spotify.Track | null>(null);
   const [sdkStatus, setSdkStatus] = useState<SdkStatusTypes>({
-    paused: false,
+    paused: true,
     actived: false,
     repeated: 'off',
     position: 0,
@@ -33,6 +39,12 @@ const WebPlayers = () => {
 
   const onPause = () => {
     if (spotifyToken) sdkPlayerPauseTrack(deviceId, spotifyToken);
+  };
+
+  const onSkip = (type: 'previous' | 'next') => {
+    if (spotifyToken) {
+      sdkPlayerSkipTrack(type, deviceId, spotifyToken);
+    }
   };
 
   const onRepeat = () => {
@@ -106,22 +118,60 @@ const WebPlayers = () => {
   }, []);
 
   return (
-    <div>
-      <p>SDK Player</p>
-      {sdkPlayer && (
-        <div>
-          {currentTrack && (
-            <div>
-              <p>{`${currentTrack.name}`}</p>
-              <p>{`${currentTrack.artists[0].name}`}</p>
-            </div>
-          )}
-          <button onClick={onPlay}>play Song</button>
-          <button onClick={onPause}>pause Song</button>
-          <button onClick={onRepeat}>Repear Song</button>
+    <style.Wrapper>
+      <style.SongInfoBox>
+        <p className="title">
+          {currentTrack ? currentTrack.name : 'Welcome to MZ2MO'}
+        </p>
+        <p className="singers">
+          {currentTrack
+            ? currentTrack.artists.map((artist) => artist.name).join(', ')
+            : 'Web SDK Player'}
+        </p>
+      </style.SongInfoBox>
+      <style.EmojiListBox>
+        <Image
+          src="/icons/player/emojiCode.svg"
+          alt="emojiCode"
+          width={36}
+          height={36}
+        />
+        {dummyEmoji.slice(0, 5).map((emoji) => (
+          <p>{emoji.name}</p>
+        ))}
+        <Image
+          src="/icons/player/moreEmoji.svg"
+          alt="moreEmoji"
+          width={36}
+          height={36}
+        />
+      </style.EmojiListBox>
+      <style.PlayerButtonBox>
+        <Image
+          src="/icons/player/skipPrev.svg"
+          alt="play"
+          width={10}
+          height={10}
+          onClick={() => onSkip('previous')}
+        />
+        <div className="playCircle">
+          <Image
+            src={`/icons/player/${sdkStatus.paused ? 'play' : 'pause'}.svg`}
+            alt="play"
+            width={18}
+            height={18}
+            onClick={sdkStatus.paused ? onPlay : onPause}
+          />
         </div>
-      )}
-    </div>
+        <Image
+          src="/icons/player/skipNext.svg"
+          alt="play"
+          width={10}
+          height={10}
+          onClick={() => onSkip('next')}
+        />
+      </style.PlayerButtonBox>
+    </style.Wrapper>
   );
 };
 

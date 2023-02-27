@@ -106,9 +106,7 @@ export async function putAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-): Promise<
-  { isSuccess: true; result: T } | { isSuccess: false; result: ApiError }
-> {
+): ApiResult<T> {
   try {
     const response = await API.put<T, AxiosResponse<T, D>, D>(url, data, {
       ...config,

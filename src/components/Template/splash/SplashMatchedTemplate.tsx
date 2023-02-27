@@ -14,8 +14,8 @@ const Main = styled.main`
 
 const TitleWrapper = styled.div`
   position: absolute;
-  top: 6.5rem;
-  left: 7.7rem;
+  top: 65px;
+  left: 80px;
   z-index: 10;
   h2 {
     font-size: ${({ theme }) => theme.fonts.size.Heading1};
@@ -68,8 +68,22 @@ const DiskList = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
+  gap: 71px;
+  width: 100%;
 `;
-const DiskItem = styled.li``;
+const DiskItem = styled.li`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 341px;
+  max-width: 341px;
+  padding: 51px 0;
+  border-radius: 90px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #0e0e0f;
+`;
 
 const PlayPause = styled.li`
   width: 67px;
@@ -79,6 +93,33 @@ const PlayPause = styled.li`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
+`;
+
+const SongInfo = styled.div`
+  margin-top: 33px;
+  text-align: center;
+`;
+const SongTitle = styled.h3`
+  font-size: ${({ theme }) => theme.fonts.size.body2};
+  line-height: 160%;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.Text.primary};
+  margin: 0;
+  word-break: break-all;
+`;
+
+const SongSinger = styled.p`
+  font-size: ${({ theme }) => theme.fonts.size.body3};
+  color: ${({ theme }) => theme.colors.Text.none};
+  margin: 0;
+`;
+const ProgressBar = styled.div`
+  margin-top: 20px;
+  min-width: 190px;
+  input {
+    width: 100%;
+  }
 `;
 
 const EmojisWrapper = styled.div`
@@ -142,6 +183,7 @@ const BottomButton = styled.button`
   background-color: ${({ theme }) => theme.colors.Accent.main};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
+  letter-spacing: 0.5px;
   color: ${({ theme }) => theme.colors.Text.primary};
 `;
 
@@ -184,6 +226,85 @@ const SplashMatchedTemplate = () => {
                 </PlayPause>
               </DiskController>
             </DiskPlayer>
+            <SongInfo>
+              <SongTitle>LoveDive</SongTitle>
+              <SongSinger>IVE</SongSinger>
+            </SongInfo>
+            <ProgressBar>
+              <input type="range" />
+            </ProgressBar>
+          </DiskItem>
+          <DiskItem>
+            <DiskPlayer>
+              <Disk />
+              <DiskController>
+                <PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </PlayPause>
+              </DiskController>
+            </DiskPlayer>
+            <SongInfo>
+              <SongTitle>LoveDiveLoveDiveLoveDiveLoveDiveLoveDive</SongTitle>
+              <SongSinger>IVEIVEIVEIVEIVEIVE</SongSinger>
+            </SongInfo>
+            <ProgressBar>
+              <input type="range" />
+            </ProgressBar>
+          </DiskItem>
+          <DiskItem>
+            <DiskPlayer>
+              <Disk />
+              <DiskController>
+                <PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </PlayPause>
+              </DiskController>
+            </DiskPlayer>
+            <SongInfo>
+              <SongTitle>LoveDive</SongTitle>
+              <SongSinger>IVE</SongSinger>
+            </SongInfo>
+            <ProgressBar>
+              <input type="range" />
+            </ProgressBar>
+          </DiskItem>
+          <DiskItem>
+            <DiskPlayer>
+              <Disk />
+              <DiskController>
+                <PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </PlayPause>
+              </DiskController>
+            </DiskPlayer>
+            <SongInfo>
+              <SongTitle>LoveDive</SongTitle>
+              <SongSinger>IVE</SongSinger>
+            </SongInfo>
+            <ProgressBar>
+              <input type="range" />
+            </ProgressBar>
           </DiskItem>
         </DiskList>
       </DiskWrapper>

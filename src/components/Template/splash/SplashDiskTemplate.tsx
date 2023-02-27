@@ -68,6 +68,7 @@ const PlayPause = styled(DiskControllerButtons)`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
 `;
 const Forward = styled(DiskControllerButtons)``;
 
@@ -154,6 +155,7 @@ const BottomButton = styled.button`
   background-color: ${({ theme }) => theme.colors.Accent.main};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
+  letter-spacing: 0.5px;
   color: ${({ theme }) => theme.colors.Text.primary};
 `;
 

@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
 
-import { ApiError, ApiSuccess } from '@/types/apiTypes';
+import { ApiError, ApiResult } from '@/types/apiTypes';
 import { API_URL } from '@/constants/apis';
 
 /**
@@ -53,14 +53,14 @@ function handleApiError(err: unknown): ApiError {
  * @param config API 요청과 관련된 config (AxiosRequestConfig)
  * @returns API 요청 성공과 실패에 따른 객체 (APIResponse)
  */
-export async function getAsync<T>(url: string, config?: AxiosRequestConfig) {
+export async function getAsync<T>(
+  url: string,
+  config?: AxiosRequestConfig,
+): ApiResult<T> {
   try {
-    const response = await API.get<T, AxiosResponse<ApiSuccess<T>, any>, any>(
-      url,
-      {
-        ...config,
-      },
-    );
+    const response = await API.get<T, AxiosResponse<T, any>, any>(url, {
+      ...config,
+    });
     return { isSuccess: true, result: response.data };
   } catch (err) {
     return { isSuccess: false, result: handleApiError(err) };
@@ -81,15 +81,36 @@ export async function postAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-) {
+): ApiResult<T> {
   try {
-    const response = await API.post<T, AxiosResponse<ApiSuccess<T>, D>, D>(
-      url,
-      data,
-      {
-        ...config,
-      },
-    );
+    const response = await API.post<T, AxiosResponse<T, D>, D>(url, data, {
+      ...config,
+    });
+    return { isSuccess: true, result: response.data };
+  } catch (err) {
+    return { isSuccess: false, result: handleApiError(err) };
+  }
+}
+
+/**
+ * PUT 요청을 처리하는 유틸 API 함수 putAsync
+ * @param T 요청 결과로 받을 데이터의 타입
+ * @param D API 요청 시 서버에 전송할 데이터의 타입
+ *
+ * @param url API 요청을 보낼 url (string)
+ * @param data API 요청과 함께 동봉할 data
+ * @param config API 요청과 관련된 config (AxiosRequestConfig)
+ * @returns API 요청 성공과 실패에 따른 객체 (ApiResponse)
+ */
+export async function putAsync<T, D>(
+  url: string,
+  data: D,
+  config?: AxiosRequestConfig,
+): ApiResult<T> {
+  try {
+    const response = await API.put<T, AxiosResponse<T, D>, D>(url, data, {
+      ...config,
+    });
     return { isSuccess: true, result: response.data };
   } catch (err) {
     return { isSuccess: false, result: handleApiError(err) };
@@ -110,15 +131,11 @@ export async function patchAsync<T, D>(
   url: string,
   data: D,
   config?: AxiosRequestConfig,
-) {
+): ApiResult<T> {
   try {
-    const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, D>, D>(
-      url,
-      data,
-      {
-        ...config,
-      },
-    );
+    const response = await API.patch<T, AxiosResponse<T, D>, D>(url, data, {
+      ...config,
+    });
     return { isSuccess: true, result: response.data };
   } catch (err) {
     return { isSuccess: false, result: handleApiError(err) };
@@ -134,14 +151,14 @@ export async function patchAsync<T, D>(
  * @param config Api 요청과 관련된 config (AxiosRequestConfig)
  * @returns Api 요청 성공과 실패에 따른 객체 (ApiResponse)
  */
-export async function deleteAsync<T>(url: string, config?: AxiosRequestConfig) {
+export async function deleteAsync<T>(
+  url: string,
+  config?: AxiosRequestConfig,
+): ApiResult<T> {
   try {
-    const response = await API.patch<T, AxiosResponse<ApiSuccess<T>, any>, any>(
-      url,
-      {
-        ...config,
-      },
-    );
+    const response = await API.patch<T, AxiosResponse<T, any>, any>(url, {
+      ...config,
+    });
     return { isSuccess: true, result: response.data };
   } catch (err) {
     return { isSuccess: false, result: handleApiError(err) };

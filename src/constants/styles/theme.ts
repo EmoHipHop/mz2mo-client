@@ -1,37 +1,46 @@
 import { DefaultTheme } from 'styled-components';
 
 const colors = {
-  mono: {
-    white: '#FFFFFF',
-    gray1: '#F5F5F5',
-    gray2: '#EDEDED',
-    gray3: '#E0E0E0',
-    gray4: '#C2C2C2',
-    gray5: '#9E9E9E',
-    gray6: '#757575',
-    gray7: '#616161',
-    gray8: '#424242',
+  Text: {
+    primary: '#FAFAFA',
+    sub: '#F8F9FB',
+    click: '#EDEDEF',
+    none: '#7E7D85',
   },
-  black: {
-    opacity30: '#1D1D1D33',
-    opacity60: '#1D1D1D66',
-    black: '#1D1D1D',
+  Accent: {
+    main: '#6E56CF',
+    subWrong: '#E5494D',
+    subRight: '#0091FF',
+  },
+  Darkmode: {
+    background: '#030303',
+    boxcolor: '#1C1C1E',
+    boxshadow: '#141416',
+    boxinput: '#232325',
+    highlight: '#ECECEE',
+    default: '#7D7C81',
   },
 };
 
 const fontWeight = {
   light: 200,
   normal: 400,
+  semiBold: 600,
   bold: 700,
 };
 
 const fontSize = {
-  sm: '14px',
-  base: '16px',
-  lg: '24px',
-  xl: '32px',
-  xxl: '48px',
-  title: '96px',
+  buttonSmall: '12px',
+  buttonMedium: '14px',
+  buttonLarge: '16px',
+  body3: '18px',
+  body2: '20px',
+  body1: '22px',
+  Heading5: '26px',
+  Heading4: '34px',
+  Heading3: '42px',
+  Heading2: '50px',
+  Heading1: '66px',
 };
 
 const fonts = {

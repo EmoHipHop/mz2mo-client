@@ -6,13 +6,13 @@ export const Main = styled.main`
   background-color: ${({ theme }) => theme.colors.Darkmode.background};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 `;
 
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 65px;
+  top: 20px;
   left: 80px;
   z-index: 10;
   h2 {

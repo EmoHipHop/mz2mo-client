@@ -12,8 +12,8 @@ export const Main = styled.main`
 
 export const TitleWrapper = styled.div`
   position: absolute;
-  top: 6.5rem;
-  left: 7.7rem;
+  top: 20px;
+  left: 80px;
   z-index: 10;
   h2 {
     font-size: ${({ theme }) => theme.fonts.size.Heading1};

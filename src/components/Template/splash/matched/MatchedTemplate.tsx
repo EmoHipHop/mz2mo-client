@@ -49,6 +49,78 @@ const MatchedTemplate = () => {
               <input type="range" />
             </style.ProgressBar>
           </style.DiskItem>
+          <style.DiskItem>
+            <style.DiskPlayer>
+              <style.Disk />
+              <style.DiskController>
+                <style.PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </style.PlayPause>
+              </style.DiskController>
+            </style.DiskPlayer>
+            <style.SongInfo>
+              <style.SongTitle>LoveDive</style.SongTitle>
+              <style.SongSinger>IVE</style.SongSinger>
+            </style.SongInfo>
+            <style.ProgressBar>
+              <input type="range" />
+            </style.ProgressBar>
+          </style.DiskItem>
+          <style.DiskItem>
+            <style.DiskPlayer>
+              <style.Disk />
+              <style.DiskController>
+                <style.PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </style.PlayPause>
+              </style.DiskController>
+            </style.DiskPlayer>
+            <style.SongInfo>
+              <style.SongTitle>LoveDive</style.SongTitle>
+              <style.SongSinger>IVE</style.SongSinger>
+            </style.SongInfo>
+            <style.ProgressBar>
+              <input type="range" />
+            </style.ProgressBar>
+          </style.DiskItem>
+          <style.DiskItem>
+            <style.DiskPlayer>
+              <style.Disk />
+              <style.DiskController>
+                <style.PlayPause>
+                  <button>
+                    <Image
+                      src="/assets/images/playPauseIcon.svg"
+                      alt="logo"
+                      width={12}
+                      height={15}
+                    />
+                  </button>
+                </style.PlayPause>
+              </style.DiskController>
+            </style.DiskPlayer>
+            <style.SongInfo>
+              <style.SongTitle>LoveDive</style.SongTitle>
+              <style.SongSinger>IVE</style.SongSinger>
+            </style.SongInfo>
+            <style.ProgressBar>
+              <input type="range" />
+            </style.ProgressBar>
+          </style.DiskItem>
         </style.DiskList>
       </style.DiskWrapper>
       <style.EmojisWrapper>
@@ -56,6 +128,46 @@ const MatchedTemplate = () => {
           이 음악이 다른 이모지와 더 어울리나요?
         </style.EmojiTitle>
         <style.EmojiList>
+          <style.EmojiItem>
+            <style.EmojiButton>
+              <Image
+                src="/assets/images/sampleEmoji.svg"
+                alt="emoji"
+                width={34}
+                height={34}
+              />
+            </style.EmojiButton>
+          </style.EmojiItem>
+          <style.EmojiItem>
+            <style.EmojiButton>
+              <Image
+                src="/assets/images/sampleEmoji.svg"
+                alt="emoji"
+                width={34}
+                height={34}
+              />
+            </style.EmojiButton>
+          </style.EmojiItem>
+          <style.EmojiItem>
+            <style.EmojiButton>
+              <Image
+                src="/assets/images/sampleEmoji.svg"
+                alt="emoji"
+                width={34}
+                height={34}
+              />
+            </style.EmojiButton>
+          </style.EmojiItem>
+          <style.EmojiItem>
+            <style.EmojiButton>
+              <Image
+                src="/assets/images/sampleEmoji.svg"
+                alt="emoji"
+                width={34}
+                height={34}
+              />
+            </style.EmojiButton>
+          </style.EmojiItem>
           <style.EmojiItem>
             <style.EmojiButton>
               <Image

@@ -5,6 +5,9 @@ import { setSpotifyTokenAtom } from '@/stores/actions';
 
 import SplashMainTemplate from '@/components/templates/splash/main-template';
 
+import BaseTemplates from '@/components/templates/BaseTemplates';
+import MainTemplate from '@/components/Template/splash/main';
+
 const Home = () => {
   const router = useRouter();
   const setSpotifyToken = useSetAtom(setSpotifyTokenAtom);

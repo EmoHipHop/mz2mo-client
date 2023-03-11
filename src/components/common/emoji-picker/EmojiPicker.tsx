@@ -27,5 +27,4 @@ const EmojiPicker = ({ x, y }: EmojiPickerProps) => {
     </style.Container>
   );
 }
-
 export default EmojiPicker;

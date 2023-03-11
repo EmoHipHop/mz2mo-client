@@ -27,6 +27,7 @@ export const MenuList = styled.div`
   display: flex;
   align-items: center;
   padding: 0rem 3rem 0rem 1rem;
+
 `;
 
 export const MenuLinks = styled.ul`

@@ -6,7 +6,7 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "airbnb",
-    "plugin:@typescript-eslint/recommended",
+    "airbnb/hooks",
     "plugin:@next/next/recommended",
     "prettier"
   ],
@@ -21,7 +21,7 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "directory": "./tsconfig.json"
+        "project": "./tsconfig.json"
       }
     }
   },
@@ -42,9 +42,11 @@
     "react/button-has-type": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "warn",
+    "react-hooks/exhaustive-deps": "warn",
     "import/no-extraneous-dependencies": "off",
     "import/extensions": "off",
     "no-unused-vars": "warn",
+    "no-console": "off",
     "import/prefer-default-export": "off"
   }
 }

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import SampleSplashAlbumSvg from '@/assets/icons/images/splashAlbum.svg';
+
 export const Main = styled.main`
   width: 100%;
   position: relative;
@@ -43,13 +45,11 @@ export const DiskWrapper = styled.div``;
 export const DiskPlayer = styled.div`
   position: relative;
 `;
-export const Disk = styled.div`
+export const Disk = styled(SampleSplashAlbumSvg)`
   width: 197px;
   height: 197px;
   border-radius: 50%;
   overflow: hidden;
-  background-image: url('/assets/images/splashAlbum.svg');
-  background-size: cover;
 `;
 export const DiskController = styled.ul`
   position: absolute;
@@ -86,7 +86,7 @@ export const DiskItem = styled.li`
   background-color: #0e0e0f;
 `;
 
-export const PlayPause = styled.li`
+export const PlayPause = styled.div`
   width: 67px;
   height: 67px;
   background-color: ${({ theme }) => theme.colors.Darkmode.background};

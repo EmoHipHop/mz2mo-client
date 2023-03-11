@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import SampleSplashAlbumSvg from '@/assets/icons/images/splashAlbum.svg';
+
 export const Main = styled.main`
   width: 100%;
   position: relative;
@@ -38,12 +40,9 @@ export const DiskPlayer = styled.div`
   position: relative;
   padding: 0 100px;
 `;
-export const Disk = styled.div`
-  width: 472px;
-  height: 472px;
+export const Disk = styled(SampleSplashAlbumSvg)`
   border-radius: 50%;
   overflow: hidden;
-  background-image: url('/assets/images/splashAlbum.svg');
 `;
 export const DiskController = styled.ul`
   position: absolute;

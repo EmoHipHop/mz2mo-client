@@ -1,4 +1,7 @@
-import Image from 'next/image';
+import ChevronLeftSvg from '@/assets/icons/images/chevronLeft.svg';
+import PlayPauseIconSvg from '@/assets/icons/images/playPauseIcon.svg';
+import SampleEmojiSvg from '@/assets/icons/images/sampleEmoji.svg';
+
 import * as style from './SplashMatchedTemplate.style';
 
 const SplashMatchedTemplate = () => (
@@ -11,12 +14,7 @@ const SplashMatchedTemplate = () => (
       </h2>
       <p>
         <span className="arrow">
-          <Image
-            src="/assets/images/chevronLeft.svg"
-            alt="back"
-            width={6}
-            height={12}
-          />
+          <ChevronLeftSvg width={6} height={13} />
         </span>
         다른 이모지 선택하기
       </p>
@@ -28,14 +26,7 @@ const SplashMatchedTemplate = () => (
             <style.Disk />
             <style.DiskController>
               <style.PlayPause>
-                <button>
-                  <Image
-                    src="/assets/images/playPauseIcon.svg"
-                    alt="logo"
-                    width={12}
-                    height={15}
-                  />
-                </button>
+                <PlayPauseIconSvg width={12} height={15} />
               </style.PlayPause>
             </style.DiskController>
           </style.DiskPlayer>
@@ -52,14 +43,7 @@ const SplashMatchedTemplate = () => (
             <style.Disk />
             <style.DiskController>
               <style.PlayPause>
-                <button>
-                  <Image
-                    src="/assets/images/playPauseIcon.svg"
-                    alt="logo"
-                    width={12}
-                    height={15}
-                  />
-                </button>
+                <PlayPauseIconSvg width={12} height={15} />
               </style.PlayPause>
             </style.DiskController>
           </style.DiskPlayer>
@@ -76,14 +60,7 @@ const SplashMatchedTemplate = () => (
             <style.Disk />
             <style.DiskController>
               <style.PlayPause>
-                <button>
-                  <Image
-                    src="/assets/images/playPauseIcon.svg"
-                    alt="logo"
-                    width={12}
-                    height={15}
-                  />
-                </button>
+                <PlayPauseIconSvg width={12} height={15} />
               </style.PlayPause>
             </style.DiskController>
           </style.DiskPlayer>
@@ -100,14 +77,7 @@ const SplashMatchedTemplate = () => (
             <style.Disk />
             <style.DiskController>
               <style.PlayPause>
-                <button>
-                  <Image
-                    src="/assets/images/playPauseIcon.svg"
-                    alt="logo"
-                    width={12}
-                    height={15}
-                  />
-                </button>
+                <PlayPauseIconSvg width={12} height={15} />
               </style.PlayPause>
             </style.DiskController>
           </style.DiskPlayer>
@@ -128,52 +98,27 @@ const SplashMatchedTemplate = () => (
       <style.EmojiList>
         <style.EmojiItem>
           <style.EmojiButton>
-            <Image
-              src="/assets/images/sampleEmoji.svg"
-              alt="emoji"
-              width={34}
-              height={34}
-            />
+            <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
         </style.EmojiItem>
         <style.EmojiItem>
           <style.EmojiButton>
-            <Image
-              src="/assets/images/sampleEmoji.svg"
-              alt="emoji"
-              width={34}
-              height={34}
-            />
+            <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
         </style.EmojiItem>
         <style.EmojiItem>
           <style.EmojiButton>
-            <Image
-              src="/assets/images/sampleEmoji.svg"
-              alt="emoji"
-              width={34}
-              height={34}
-            />
+            <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
         </style.EmojiItem>
         <style.EmojiItem>
           <style.EmojiButton>
-            <Image
-              src="/assets/images/sampleEmoji.svg"
-              alt="emoji"
-              width={34}
-              height={34}
-            />
+            <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
         </style.EmojiItem>
         <style.EmojiItem>
           <style.EmojiButton>
-            <Image
-              src="/assets/images/sampleEmoji.svg"
-              alt="emoji"
-              width={34}
-              height={34}
-            />
+            <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
         </style.EmojiItem>
       </style.EmojiList>

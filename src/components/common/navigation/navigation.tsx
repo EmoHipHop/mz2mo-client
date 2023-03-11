@@ -1,17 +1,10 @@
-import Image from 'next/image';
+import MenuSvg from '@/assets/icons/common/menu.svg';
 
 import * as style from './Navigation.style';
 
 const Navigation = () => (
   <style.NavBody>
-    <style.LogoArea>
-      <Image
-        src="/icons/logo.svg"
-        width={153}
-        height={40}
-        layout="responsive"
-      />
-    </style.LogoArea>
+    <style.StyledLogoSvg />
     <style.MenuList>
       <style.MenuLinks>
         <style.MenuItem>
@@ -24,12 +17,7 @@ const Navigation = () => (
           <style.MenuText>로그인</style.MenuText>
         </style.MenuItem>
         <style.Hambuger>
-          <Image
-            src="/icons/menu.svg"
-            width={30}
-            height={30}
-            layout="responsive"
-          />
+          <MenuSvg />
         </style.Hambuger>
       </style.MenuLinks>
     </style.MenuList>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navigation from '@/components/common/navigation/Navigation';
+import Navigation from '@/components/common/navigation';
 
 import * as style from './PageLayout.style';
 

@@ -27,8 +27,9 @@
       "@/stores/*": ["./src/stores/*"],
       "@/types/*": ["./src/types/*"],
       "@/utils/*": ["./src/utils/*"]
-    }
+    },
+    "incremental": true
   },
-  "include": ["global.d.ts", "**/*.ts", "**/*.tsx", "next-env.d.ts"],
+  "include": ["custom.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

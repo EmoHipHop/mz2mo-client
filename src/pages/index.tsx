@@ -1,23 +1,22 @@
-import Head from 'next/head';
+import { useSetAtom } from 'jotai';
+import { useRouter } from 'next/router';
 
-import BaseTemplates from '@/components/templates/BaseTemplates';
-import MainTemplate from '@/components/Template/splash/main';
+import { setSpotifyTokenAtom } from '@/stores/actions';
+
+import SplashMainTemplate from '@/components/templates/splash/main-template';
 
 const Home = () => {
-  return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#00917C" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>MZ2MO : 음악의 세계를 열다</title>
-      </Head>
-      <BaseTemplates>
-        <MainTemplate />
-      </BaseTemplates>
-    </>
-  );
+  const router = useRouter();
+  const setSpotifyToken = useSetAtom(setSpotifyTokenAtom);
+
+  const accessDummyToken = () => {
+    const dummyToken =
+      'BQDM-BbpG2oZYS6ZcfbxST-VOIlqwLBEA03Y5WDt51c4Cox-3iqiDGcDpjFZhsY0FEWvpLxldJeCQtDm5zxVlCw4sAcKtacx85D4wlwWkZLsRSCq_PKUolGQ_HhTTJ25eZ_5ZGqwzurRYSAGjaGTsIFHDHkxgiqFf47KZ50l_DaD3nMzrhH-VCz21qt_GCdTUgSROeCEP5FEQYNvBxUW0mHvQmH-';
+    setSpotifyToken(dummyToken);
+    router.push('/splash/genre');
+  };
+
+  return <SplashMainTemplate accessDummyToken={accessDummyToken} />;
 };
 
 export default Home;

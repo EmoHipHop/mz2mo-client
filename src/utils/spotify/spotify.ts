@@ -25,7 +25,7 @@ export const sdkPlayerPlayTrack = async (
   token: string,
   position: number,
 ): Promise<boolean> => {
-  const response = await putAsync<null, any>(
+  const response = await putAsync<null, unknown>(
     `/me/player/play`,
     {
       uris,

@@ -10,6 +10,6 @@ const SpotifyLogin = () => {
       <p>Login</p>
     </div>
   );
-};
+}
 
 export default SpotifyLogin;

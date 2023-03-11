@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import * as style from './DiskTemplate.style';
+import * as style from './SplashDiskTemplate.style';
 
-const DiskTemplate = () => {
+const SplashDiskTemplate = () => {
   const router = useRouter();
   return (
     <style.Main>
@@ -117,4 +117,4 @@ const DiskTemplate = () => {
   );
 };
 
-export default DiskTemplate;
+export default SplashDiskTemplate;

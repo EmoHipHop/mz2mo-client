@@ -9,6 +9,8 @@ import { GlobalStyle } from '@/constants/styles/globalStyle';
 import { theme } from '@/constants/styles/theme';
 import '@/assets/fonts/font.css';
 
+import PageHead from '@/components/layout/page-head';
+import PageLayout from '@/components/layout/page-layout';
 import ModalPortal from '@/components/common/modal/modal-portal';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -29,8 +31,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Provider>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
+          <PageHead />
           <ModalPortal />
-          <Component {...pageProps} />
+          <PageLayout>
+            {/* eslint-disable react/jsx-props-no-spreading */}
+            <Component {...pageProps} />
+          </PageLayout>
         </ThemeProvider>
       </Provider>
     </QueryClientProvider>

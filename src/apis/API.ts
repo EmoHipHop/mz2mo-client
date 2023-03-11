@@ -1,6 +1,7 @@
-import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { isAxiosError } from 'axios';
 
-import { ApiError, ApiResult } from '@/types/apiTypes';
+import type { ApiError, ApiResult } from '@/types/apiTypes';
 import { API_URL } from '@/constants/apis';
 
 /**
@@ -23,7 +24,8 @@ function handleApiError(err: unknown): ApiError {
     // 요청을 전송하여 서버에서 응답을 받았으나, 에러가 발생한 경우
     if (err.response) {
       // 서버의 Error Response 의 body를 참고하여 데이터 추가.
-      const { data: errResponse }: AxiosResponse<ApiError, any> = err.response;
+      const { data: errResponse }: AxiosResponse<ApiError, unknown> =
+        err.response;
       return {
         code: err.response.status,
         msg: errResponse.msg,
@@ -58,7 +60,7 @@ export async function getAsync<T>(
   config?: AxiosRequestConfig,
 ): ApiResult<T> {
   try {
-    const response = await API.get<T, AxiosResponse<T, any>, any>(url, {
+    const response = await API.get<T, AxiosResponse<T, unknown>, unknown>(url, {
       ...config,
     });
     return { isSuccess: true, result: response.data };
@@ -156,9 +158,12 @@ export async function deleteAsync<T>(
   config?: AxiosRequestConfig,
 ): ApiResult<T> {
   try {
-    const response = await API.patch<T, AxiosResponse<T, any>, any>(url, {
-      ...config,
-    });
+    const response = await API.patch<T, AxiosResponse<T, unknown>, unknown>(
+      url,
+      {
+        ...config,
+      },
+    );
     return { isSuccess: true, result: response.data };
   } catch (err) {
     return { isSuccess: false, result: handleApiError(err) };

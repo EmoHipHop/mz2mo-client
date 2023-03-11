@@ -1,4 +1,4 @@
-import { SpotifyAccessTokenOutput } from '@/types/spotifyTypes';
+import type { SpotifyAccessTokenOutput } from '@/types/spotifyTypes';
 import { postAsync } from './API';
 
 export async function redirectToSpotifyAuth() {
@@ -19,7 +19,7 @@ export async function getSpotifyAccessToken(code: string) {
   const encodedClientSecret = Buffer.from(
     `${process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID}:${process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET}`,
   ).toString('base64');
-  const response = await postAsync<SpotifyAccessTokenOutput, any>(
+  const response = await postAsync<SpotifyAccessTokenOutput, unknown>(
     '/api/token',
     {
       code,

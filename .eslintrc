@@ -1,9 +1,8 @@
 {
   "env": {
     "browser": true,
-    "node": true
+    "es6": true
   },
-  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "airbnb",
@@ -11,6 +10,7 @@
     "plugin:@next/next/recommended",
     "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -21,7 +21,7 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "directory": "./tsconfig.json"
+        "project": "./tsconfig.json"
       }
     }
   },
@@ -65,22 +65,15 @@
         "namedComponents": "arrow-function"
       }
     ],
-    "react/self-closing-comp": "error",
-    "react/no-unescaped-entities": "off",
-    "react/no-array-index-key": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "react/jsx-one-expression-per-line": "off",
-    "react/jsx-uses-react": "off",
-    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "react/require-default-props": [
-      "error",
-      {
-        "ignoreFunctionalComponents": true
-      }
-    ],
-    "react/jsx-wrap-multilines": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/button-has-type": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "import/prefer-default-export": "off"
   }
 }

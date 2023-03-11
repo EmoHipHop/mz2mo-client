@@ -17,17 +17,14 @@ const EmojiPicker = ({ x, y }: EmojiPickerProps) => {
         x
       </style.Close>
       <style.EmojiContainer>
-        {dummyEmoji.map((emoji, index) => {
-          return (
+        {dummyEmoji.map((emoji, index) => (
             // FIXME: get emoji data
             <style.Emoji key={emoji.id} type="button" isChecked={!!(index % 2)}>
               {emoji.name}
             </style.Emoji>
-          );
-        })}
+          ))}
       </style.EmojiContainer>
     </style.Container>
   );
-};
-
+}
 export default EmojiPicker;

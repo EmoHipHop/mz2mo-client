@@ -1,12 +1,5 @@
-import BaseTemplates from '@/components/templates/BaseTemplates';
-import MatchedTemplate from '@/components/Template/splash/matched';
+import SplashMatchedTemplate from '@/components/templates/splash/matched-template';
 
-const Match = () => {
-  return (
-    <BaseTemplates>
-      <MatchedTemplate />
-    </BaseTemplates>
-  );
-};
+const Match = () => <SplashMatchedTemplate />;
 
 export default Match;

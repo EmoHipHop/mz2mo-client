@@ -38,6 +38,6 @@ const ModalPortal = () => {
       : null;
   }
   return null;
-};
+}
 
 export default ModalPortal;

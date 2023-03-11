@@ -20,8 +20,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.20.7",
-    "@commitlint/cli": "17.3.0",
-    "@commitlint/config-conventional": "17.3.0",
     "@next/eslint-plugin-next": "13.1.1",
     "@svgr/webpack": "6.5.1",
     "@tanstack/react-query-devtools": "4.20.4",
@@ -33,7 +31,6 @@
     "@typescript-eslint/eslint-plugin": "5.47.1",
     "@typescript-eslint/parser": "5.47.1",
     "babel-loader": "9.1.0",
-    "commitlint": "17.3.0",
     "eslint": "8.31.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "12.1.0",
@@ -47,8 +44,5 @@
     "lint-staged": "13.1.0",
     "prettier": "2.8.1",
     "typescript": "4.9.5"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/TEO-SPRINT-14th-9team/mz2mo-client",
-  "author": "Baik Gwangin <gwangin1999@naver.com>"
+  }
 }

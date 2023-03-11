@@ -1,10 +1,5 @@
-import PageLayout from '@/components/layout/page-layout';
 import DiskTemplate from '@/components/templates/splash/disk-template';
 
-const SplashGenre = () => (
-  <PageLayout>
-    <DiskTemplate />
-  </PageLayout>
-);
+const SplashGenre = () => <DiskTemplate />;
 
 export default SplashGenre;

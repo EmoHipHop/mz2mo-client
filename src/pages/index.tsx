@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 
 import { setSpotifyTokenAtom } from '@/stores/actions';
 
-import PageLayout from '@/components/layout/page-layout';
 import SplashMainTemplate from '@/components/templates/splash/main-template';
 
 const Home = () => {
@@ -17,11 +16,7 @@ const Home = () => {
     router.push('/splash/genre');
   };
 
-  return (
-    <PageLayout>
-      <SplashMainTemplate accessDummyToken={accessDummyToken} />
-    </PageLayout>
-  );
+  return <SplashMainTemplate accessDummyToken={accessDummyToken} />;
 };
 
 export default Home;

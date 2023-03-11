@@ -1,5 +1,11 @@
-import type { DocumentContext, DocumentInitialProps } from 'next/document';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -13,7 +19,6 @@ class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            /* eslint-disable react/jsx-props-no-spreading */
             sheet.collectStyles(<App {...props} />),
         });
 

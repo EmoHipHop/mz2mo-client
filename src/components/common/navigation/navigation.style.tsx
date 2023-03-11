@@ -1,33 +1,29 @@
 import styled from 'styled-components';
-import LogoSvg from '@/assets/icons/common/logo.svg';
 
-export const NavBody = styled.nav`
+export const NavBody = styled.div`
   width: 100%;
-  height: 85px;
-
   left: 0;
   position: fixed;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  background-color: black;
+  line-height: 65px;
   text-align: center;
+  justify-content: space-between;
+  background-color: black;
 `;
 
-export const StyledLogoSvg = styled(LogoSvg)`
-  width: 159px;
-  height: 25px;
-  padding-left: 80px;
+export const LogoArea = styled.div`
+  width: 200px;
+  justify-content: center;
+  padding-left: 3rem;
 `;
 
 export const MenuList = styled.div`
   height: inherit;
   display: flex;
   align-items: center;
-  padding: 0rem 3rem 0rem 1rem;
-
+  padding-right: 3rem;
+  padding-left: 1rem;
 `;
 
 export const MenuLinks = styled.ul`

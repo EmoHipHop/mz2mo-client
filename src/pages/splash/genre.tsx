@@ -1,5 +1,12 @@
-import DiskTemplate from '@/components/templates/splash/disk-template';
+import BaseTemplates from '@/components/templates/BaseTemplates';
+import DiskTemplate from '@/components/Template/splash/disk';
 
-const SplashGenre = () => <DiskTemplate />;
+const SplashGenre = () => {
+  return (
+    <BaseTemplates>
+      <DiskTemplate />
+    </BaseTemplates>
+  );
+};
 
 export default SplashGenre;

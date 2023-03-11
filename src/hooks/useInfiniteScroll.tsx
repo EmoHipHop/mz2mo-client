@@ -1,5 +1,4 @@
-import type { RefObject } from 'react';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, RefObject } from "react";
 
 type callbackFuncType = (...args: any) => any;
 
@@ -8,10 +7,7 @@ type callbackFuncType = (...args: any) => any;
  * @param targetRef 관찰하려는 HTML Element Ref
  * @param callbackFunc 관측 대상이 관찰되었을 경우 실행할 Callback
  */
-const useInfiniteScroll = (
-  targetRef: RefObject<HTMLDivElement>,
-  callbackFunc: callbackFuncType,
-) => {
+const useInfiniteScroll = (targetRef: RefObject<HTMLDivElement>, callbackFunc: callbackFuncType) => {
   const observeRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -35,8 +31,8 @@ const useInfiniteScroll = (
        * root : 관찰 Root 의 대상을 지정 (default : 브라우저의 뷰 포트)
        */
       {
-        threshold: 1,
-      },
+        threshold: 1
+      }
     );
 
     // 관측 Ref Element의 lastElementChild 가 아니라면 종료.
@@ -48,7 +44,6 @@ const useInfiniteScroll = (
     observeRef.current.observe(targetRef.current?.lastElementChild);
 
     // hook unmount 시, 관측 또한 종료해야 함.
-    /* eslint-disable consistent-return */
     return () => observeRef.current?.disconnect();
   }, [targetRef, callbackFunc]);
 };

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { atom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 

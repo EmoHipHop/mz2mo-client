@@ -8,7 +8,7 @@ export const Main = styled.main`
   top: 65px;
 
   min-height: calc(100vh - 85px);
-  background-color: ${({ theme }) => theme.colors.Darkmode.background};
+  background-color: ${({ theme }) => theme.colors.darkMode.background};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -23,7 +23,7 @@ export const TitleWrapper = styled.div`
   h2 {
     font-size: ${({ theme }) => theme.fonts.size.Heading1};
     font-weight: ${({ theme }) => theme.fonts.weight.bold};
-    color: ${({ theme }) => theme.colors.Text.primary};
+    color: ${({ theme }) => theme.colors.text.primary};
     font-family: 'ChangwonDangamAsac';
     letter-spacing: -0.8px;
     margin: 0;
@@ -32,7 +32,7 @@ export const TitleWrapper = styled.div`
     margin-top: 35px;
     margin-bottom: 0;
     font-size: ${({ theme }) => theme.fonts.size.body2};
-    color: ${({ theme }) => theme.colors.Text.primary};
+    color: ${({ theme }) => theme.colors.text.primary};
     opacity: 0.7;
     cursor: pointer;
     .arrow {
@@ -89,7 +89,7 @@ export const DiskItem = styled.li`
 export const PlayPause = styled.div`
   width: 67px;
   height: 67px;
-  background-color: ${({ theme }) => theme.colors.Darkmode.background};
+  background-color: ${({ theme }) => theme.colors.darkMode.background};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,14 +105,14 @@ export const SongTitle = styled.h3`
   font-size: ${({ theme }) => theme.fonts.size.body2};
   line-height: 160%;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.Text.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
   margin: 0;
   word-break: break-all;
 `;
 
 export const SongSinger = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.body3};
-  color: ${({ theme }) => theme.colors.Text.none};
+  color: ${({ theme }) => theme.colors.text.none};
   margin: 0;
 `;
 export const ProgressBar = styled.div`
@@ -143,7 +143,7 @@ export const EmojiList = styled.ul`
 
 export const EmojiTitle = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.buttonLarge};
-  color: ${({ theme }) => theme.colors.Text.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
   margin: 0;
   padding: 0;
   text-align: center;
@@ -155,12 +155,12 @@ export const EmojiItem = styled.li`
   cursor: pointer;
   &:hover {
     background-color: #3f3f44;
-    border: 1px solid ${({ theme }) => theme.colors.Darkmode.default};
+    border: 1px solid ${({ theme }) => theme.colors.darkMode.default};
     border-radius: 21px;
   }
   &.is-active {
     background-color: #3f3f44;
-    border: 1px solid ${({ theme }) => theme.colors.Darkmode.default};
+    border: 1px solid ${({ theme }) => theme.colors.darkMode.default};
     border-radius: 21px;
   }
   &.text-active {
@@ -181,9 +181,9 @@ export const BottomButton = styled.button`
   bottom: 50px;
   right: 90px;
   padding: 20px 40px;
-  background-color: ${({ theme }) => theme.colors.Accent.main};
+  background-color: ${({ theme }) => theme.colors.accent.main};
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
   letter-spacing: 0.5px;
-  color: ${({ theme }) => theme.colors.Text.primary};
+  color: ${({ theme }) => theme.colors.text.primary};
 `;

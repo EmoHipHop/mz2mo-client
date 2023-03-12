@@ -1,18 +1,18 @@
 import type { DefaultTheme } from 'styled-components';
 
 const colors = {
-  Text: {
+  text: {
     primary: '#FAFAFA',
     sub: '#F8F9FB',
     click: '#EDEDEF',
     none: '#7E7D85',
   },
-  Accent: {
+  accent: {
     main: '#6E56CF',
     subWrong: '#E5494D',
     subRight: '#0091FF',
   },
-  Darkmode: {
+  darkMode: {
     background: '#030303',
     boxcolor: '#1C1C1E',
     boxshadow: '#141416',

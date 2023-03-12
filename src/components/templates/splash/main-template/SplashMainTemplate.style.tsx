@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Main = styled.main`
   width: 100%;
   min-height: calc(100vh - 85px);
-  background-color: ${({ theme }) => theme.colors.Darkmode.background};
+  background-color: ${({ theme }) => theme.colors.darkMode.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,8 +24,8 @@ export const ExploreButton = styled.button`
   align-items: center;
   padding: 1.5rem 7rem;
   font-size: ${({ theme }) => theme.fonts.size.body2};
-  color: ${({ theme }) => theme.colors.Text.primary};
-  background-color: ${({ theme }) => theme.colors.Darkmode.boxcolor};
+  color: ${({ theme }) => theme.colors.text.primary};
+  background-color: ${({ theme }) => theme.colors.darkMode.boxcolor};
   border-radius: 60px;
   border: 1px solid #2e2e30;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

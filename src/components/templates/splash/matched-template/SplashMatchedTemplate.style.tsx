@@ -21,7 +21,7 @@ export const TitleWrapper = styled.div`
     font-size: ${({ theme }) => theme.fonts.size.Heading1};
     font-weight: ${({ theme }) => theme.fonts.weight.bold};
     color: ${({ theme }) => theme.colors.text.primary};
-    font-family: 'ChangwonDangamAsac';
+    font-family: 'ChangwonDangamAsac', sans-serif;
     letter-spacing: -0.8px;
     margin: 0;
   }
@@ -135,14 +135,12 @@ export const EmojiList = styled.ul`
   justify-content: center;
   padding: 8px;
   margin: 0;
-  display: flex;
 `;
 
 export const EmojiTitle = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.buttonLarge};
   color: ${({ theme }) => theme.colors.text.primary};
   margin: 0;
-  padding: 0;
   text-align: center;
   padding: 16px 0;
 `;

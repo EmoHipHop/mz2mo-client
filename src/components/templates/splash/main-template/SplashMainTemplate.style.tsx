@@ -1,8 +1,8 @@
+import MainImage from '@/assets/icons/images/splashLogo.svg';
 import styled from 'styled-components';
 
 export const Main = styled.main`
   width: 100%;
-  min-height: calc(100vh - 85px);
   background-color: ${({ theme }) => theme.colors.darkMode.background};
   display: flex;
   flex-direction: column;
@@ -10,12 +10,7 @@ export const Main = styled.main`
   align-items: center;
 `;
 
-export const Logo = styled.div`
-  width: 267px;
-  height: 245px;
-  overflow: hidden;
-  background-image: url('/assets/images/splashLogo.svg');
-`;
+export const MainLogo = styled(MainImage)``;
 
 export const ExploreButton = styled.button`
   margin-top: 6.2rem;

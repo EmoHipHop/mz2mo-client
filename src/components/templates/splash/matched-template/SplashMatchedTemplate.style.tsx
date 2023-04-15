@@ -5,9 +5,6 @@ import SampleSplashAlbumSvg from '@/assets/icons/images/splashAlbum.svg';
 export const Main = styled.main`
   width: 100%;
   position: relative;
-  top: 65px;
-
-  min-height: calc(100vh - 85px);
   background-color: ${({ theme }) => theme.colors.darkMode.background};
   display: flex;
   flex-direction: column;

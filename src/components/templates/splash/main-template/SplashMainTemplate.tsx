@@ -6,7 +6,7 @@ interface SplashMainTemplateProps {
 
 const SplashMainTemplate = ({ accessDummyToken }: SplashMainTemplateProps) => (
   <style.Main>
-    <style.Logo />
+    <style.MainLogo />
     <style.ExploreButton onClick={accessDummyToken}>
       체험하기
     </style.ExploreButton>

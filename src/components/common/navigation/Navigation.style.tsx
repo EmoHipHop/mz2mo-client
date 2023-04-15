@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import LogoSvg from '@/assets/icons/common/logo.svg';
+import styled from 'styled-components';
 
 export const NavBody = styled.nav`
   width: 100%;
@@ -50,7 +50,7 @@ export const MenuText = styled.a`
   line-height: 65px;
   font-size: 1.2rem;
 `;
-export const Hambuger = styled.div`
+export const Hamburger = styled.div`
   padding-top: 8px;
   color: #7e7d85;
   width: 48px;

@@ -16,9 +16,9 @@ const Navigation = () => (
         <style.MenuItem>
           <style.MenuText>로그인</style.MenuText>
         </style.MenuItem>
-        <style.Hambuger>
+        <style.Hamburger>
           <MenuSvg />
-        </style.Hambuger>
+        </style.Hamburger>
       </style.MenuLinks>
     </style.MenuList>
   </style.NavBody>

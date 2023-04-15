@@ -29,3 +29,9 @@ export interface ApiError {
 export type ApiResult<T> = Promise<
   { isSuccess: true; result: T } | { isSuccess: false; result: ApiError }
 >;
+
+/**
+ * types/index.ts에는 import를 했지만 존재하지 않아서, 임시 제작
+ *
+ */
+export interface ApiSuccess {}

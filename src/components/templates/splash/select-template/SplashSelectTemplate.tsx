@@ -1,5 +1,5 @@
+import SplashEmoji from '@/components/main/Splash/SplashEmoji';
 import SplashPlayer from '@/components/main/Splash/SplashPlayer';
-import SplashSelectEmoji from '@/components/main/Splash/SplashSelectEmoji';
 import { MusicCommunityResponse, VoteResponse } from '@/types/splashTypes';
 import { useRouter } from 'next/router';
 
@@ -16,7 +16,7 @@ const SplashSelectTemplate = ({
   musicData: MusicCommunityResponse | undefined;
   voteData: VoteResponse | undefined;
   selectedItem: string;
-  selectHandler: () => void;
+  selectHandler: (id: string) => void;
 }) => {
   const [next, setNext] = useState(false);
   const router = useRouter();
@@ -30,7 +30,7 @@ const SplashSelectTemplate = ({
         <p>내가 생각하는 노래와 가장 잘 어울리는 이모지를 선택해보세요</p>
       </style.TitleWrapper>
       <SplashPlayer />
-      <SplashSelectEmoji
+      <SplashEmoji
         next={next}
         selectHandler={selectHandler}
         selectedItem={selectedItem}

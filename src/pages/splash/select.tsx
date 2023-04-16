@@ -2,7 +2,7 @@ import { MusicCommunityResponse, VoteResponse } from '@/types/splashTypes';
 import { useEffect, useState } from 'react';
 import SplashSelectTemplate from 'src/components/templates/splash/select-template';
 
-const MUSICDATA = {
+export const MUSICDATA = {
   id: '667896fb-f147-4e68-8470-a2d3d61e6a24',
   youtubeId: 'E7gg5sjEWd0',
   votes: [
@@ -34,7 +34,7 @@ const MUSICDATA = {
   ],
 };
 
-const VOTEDATA = {
+export const VOTEDATA = {
   size: 5,
   list: [
     {
@@ -75,10 +75,11 @@ const SplashSelect = () => {
     setSelectedItem(id);
   };
   useEffect(() => {
-    // const res =  getMusicCommunityAsync('/onboarding/music/community')
-    // setData(res)
-    setMusicData(() => MUSICDATA);
-    setVoteData(() => VOTEDATA);
+    // getMusicCommunityAsync('/onboarding/music/community').then((res) =>
+    //   console.log(res),
+    // );
+    setMusicData(MUSICDATA);
+    setVoteData(VOTEDATA);
   }, []);
   return (
     <SplashSelectTemplate

@@ -1,22 +1,25 @@
 import SampleEmojiSvg from '@/assets/icons/images/sampleEmoji.svg';
 import { MusicCommunityVote, VoteList } from '@/types/splashTypes';
 import React from 'react';
-import * as style from './SplashSelectEmoji.style';
+import * as style from './SplashEmoji.style';
 
-const MyComponent = ({
+const SplashEmoji = ({
   votes,
   list,
   selectHandler,
   selectedItem,
   next,
+  title,
 }: {
   votes: MusicCommunityVote[] | undefined;
   list: VoteList[] | undefined;
   selectHandler: (id: string) => void;
   selectedItem: string;
-  next: boolean;
+  next?: boolean;
+  title?: string;
 }) => (
   <style.EmojisWrapper>
+    {title && <style.EmojiTitle>{title}</style.EmojiTitle>}
     <style.EmojiList>
       {votes?.map((item, idx) => (
         <style.EmojiItem
@@ -36,4 +39,4 @@ const MyComponent = ({
   </style.EmojisWrapper>
 );
 
-export default MyComponent;
+export default SplashEmoji;

@@ -1,9 +1,9 @@
 import BackWardSvg from '@/assets/icons/images/backwardIcon.svg';
 import ForWardSvg from '@/assets/icons/images/forwardIcon.svg';
 import PlayPauseIconSvg from '@/assets/icons/images/playPauseIcon.svg';
-import * as style from './SplashPlayer.style';
+import * as style from './SplashSelectPlayer.style';
 
-const SplashPlayer = () => (
+const SplashSelectPlayer = () => (
   <>
     <style.DiskPlayer>
       <style.Disk />
@@ -29,4 +29,4 @@ const SplashPlayer = () => (
   </>
 );
 
-export default SplashPlayer;
+export default SplashSelectPlayer;

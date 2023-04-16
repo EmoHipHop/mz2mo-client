@@ -56,3 +56,11 @@ export const EmojiPercent = styled.p`
   color: ${({ theme }) => theme.colors.text.primary};
   font-weight: ${({ theme }) => theme.fonts.weight.bold};
 `;
+
+export const EmojiTitle = styled.p`
+  font-size: ${({ theme }) => theme.fonts.size.buttonLarge};
+  color: ${({ theme }) => theme.colors.text.primary};
+  margin: 0;
+  text-align: center;
+  padding: 16px 0;
+`;

@@ -78,7 +78,36 @@ export const SongSinger = styled.p`
 export const ProgressBar = styled.div`
   margin-top: 20px;
   min-width: 190px;
-  input {
+  & input {
     width: 100%;
+  }
+
+  & input[type="range"] {
+    -webkit-appearance: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(#fff, #fff);
+    //background-size width값을 조절해야함
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+  }
+
+  & input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+  }
+
+  & input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 `;

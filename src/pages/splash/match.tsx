@@ -1,4 +1,4 @@
-import SplashMatchedTemplate from '@/components/templates/splash/matched-template';
+import SplashMatchedTemplate from 'src/components/templates/splash/match-template';
 import { MUSICDATA, VOTEDATA } from '@/pages/splash/select';
 import { MusicCommunityResponse, VoteResponse } from '@/types/splashTypes';
 import { useEffect, useState } from 'react';

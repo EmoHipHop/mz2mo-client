@@ -14,12 +14,14 @@ export const NavBody = styled.nav`
 
   background-color: black;
   text-align: center;
+  z-index: 100;
 `;
 
 export const StyledLogoSvg = styled(LogoSvg)`
   width: 159px;
   height: 25px;
   padding-left: 80px;
+  cursor: pointer;
 `;
 
 export const MenuList = styled.div`
@@ -55,4 +57,5 @@ export const Hamburger = styled.div`
   color: #7e7d85;
   width: 48px;
   height: 48px;
+  cursor: pointer;
 `;

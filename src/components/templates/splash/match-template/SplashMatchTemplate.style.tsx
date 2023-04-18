@@ -23,8 +23,9 @@ export const TitleWrapper = styled.div`
     letter-spacing: -0.8px;
     margin: 0;
   }
-  p {
-    margin-top: 35px;
+  span {
+    display: inline-block;
+    padding-top: 35px;
     margin-bottom: 0;
     font-size: ${({ theme }) => theme.fonts.size.body2};
     color: ${({ theme }) => theme.colors.text.primary};

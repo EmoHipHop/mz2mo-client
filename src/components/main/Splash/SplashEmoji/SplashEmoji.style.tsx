@@ -9,25 +9,28 @@ export const EmojiList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 23px;
   margin: 0;
   border-radius: 36px;
   background-color: #191919;
   border: 1px solid #080809;
   min-width: 516px;
+  height: 120px;
 `;
 
-export const EmojiItem = styled.li<{ isSelected: boolean }>`
+export const EmojiItem = styled.li<{ isSelected: boolean; isNext: boolean }>`
   transition: 0.3s;
-  padding: 21px;
+  padding: ${({ isNext }) => (isNext ? '10px 20px' : '20px')};
   margin: 0 3px;
   cursor: pointer;
   box-sizing: border-box;
   border-radius: 21px;
   border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &:hover {
     background-color: #3f3f44;
-    border-radius: 21px;
   }
 
   ${({ isSelected, theme }) =>
@@ -36,9 +39,6 @@ export const EmojiItem = styled.li<{ isSelected: boolean }>`
     background-color: #3f3f44;
     border: 1px solid ${theme.colors.darkMode.default};
   `}
-  &.text-active {
-    padding: 10px 21px;
-  }
 `;
 
 export const EmojiButton = styled.button`
@@ -55,6 +55,7 @@ export const EmojiPercent = styled.p`
   text-align: center;
   color: ${({ theme }) => theme.colors.text.primary};
   font-weight: ${({ theme }) => theme.fonts.weight.bold};
+  font-size: ${({ theme }) => theme.fonts.size.body3};
 `;
 
 export const EmojiTitle = styled.p`

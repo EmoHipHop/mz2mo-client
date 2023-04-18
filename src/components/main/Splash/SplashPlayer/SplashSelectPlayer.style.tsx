@@ -8,6 +8,8 @@ export const DiskPlayer = styled.div`
 export const Disk = styled(SampleSplashAlbumSvg)`
   border-radius: 50%;
   overflow: hidden;
+  width: 473px;
+  height: 473px;
 `;
 export const DiskController = styled.ul`
   position: absolute;
@@ -24,7 +26,9 @@ export const DiskController = styled.ul`
 `;
 
 export const DiskControllerButtons = styled.li``;
-export const BackWard = styled(DiskControllerButtons)``;
+export const BackWard = styled(DiskControllerButtons)`
+  cursor: pointer;
+`;
 export const PlayPause = styled(DiskControllerButtons)`
   width: 150px;
   height: 150px;
@@ -35,7 +39,9 @@ export const PlayPause = styled(DiskControllerButtons)`
   border-radius: 50%;
   cursor: pointer;
 `;
-export const Forward = styled(DiskControllerButtons)``;
+export const Forward = styled(DiskControllerButtons)`
+  cursor: pointer;
+`;
 
 export const SongInfo = styled.div`
   margin-top: 33px;
@@ -62,7 +68,7 @@ export const ProgressBar = styled.div`
     width: 100%;
   }
 
-  & input[type="range"] {
+  & input[type='range'] {
     -webkit-appearance: none;
     height: 1px;
     background: rgba(255, 255, 255, 0.6);
@@ -72,7 +78,7 @@ export const ProgressBar = styled.div`
     background-repeat: no-repeat;
   }
 
-  & input[type="range"]::-webkit-slider-thumb {
+  & input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 10px;
     width: 10px;
@@ -80,10 +86,10 @@ export const ProgressBar = styled.div`
     background: #fff;
     cursor: ew-resize;
     box-shadow: 0 0 2px 0 #555;
-    transition: background .3s ease-in-out;
+    transition: background 0.3s ease-in-out;
   }
 
-  & input[type=range]::-webkit-slider-runnable-track  {
+  & input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;

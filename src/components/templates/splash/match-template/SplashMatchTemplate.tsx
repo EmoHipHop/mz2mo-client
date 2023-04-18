@@ -1,5 +1,5 @@
 import ChevronLeftSvg from '@/assets/icons/images/chevronLeft.svg';
-import SampleEmojiSvg from "@/assets/icons/images/sampleEmoji.svg";
+import SampleEmojiSvg from '@/assets/icons/images/sampleEmoji.svg';
 
 import SplashEmoji from '@/components/main/Splash/SplashEmoji';
 import SplashMatchPlayer from '@/components/main/Splash/SplashMatchPlayer/SplashMatchPlayer';
@@ -21,7 +21,12 @@ const SplashMatchTemplate = ({
   selectedItem: string;
   selectHandler: (id: string) => void;
 }) => {
-  const [next, setNext] = useState(false);
+  const router = useRouter();
+
+  const goBackHandler = () => {
+    router.push('/splash/select');
+  };
+
   return (
     <style.Main>
       <style.TitleWrapper>
@@ -30,12 +35,14 @@ const SplashMatchTemplate = ({
           <br />
           매칭된 음악입니다. <SampleEmojiSvg width={49} height={49} />
         </h2>
-        <p>
-          <span className="arrow">
-            <ChevronLeftSvg width={6} height={13} />
-          </span>
+        {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+        <span
+          onClick={goBackHandler}
+          onKeyUp={(e) => e.key === 'backspace' && goBackHandler}
+        >
+          <ChevronLeftSvg width={6} height={13} className="arrow" />
           다른 이모지 선택하기
-        </p>
+        </span>
       </style.TitleWrapper>
 
       <SplashMatchPlayer />

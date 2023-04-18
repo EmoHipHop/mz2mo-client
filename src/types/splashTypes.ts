@@ -19,3 +19,9 @@ export interface VoteResponse {
   size: number;
   list: VoteList[];
 }
+
+export interface PostVoteData {
+  data: {
+    rowEmoji: string;
+  };
+}

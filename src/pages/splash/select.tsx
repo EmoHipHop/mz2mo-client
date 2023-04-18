@@ -1,4 +1,9 @@
-import { MusicCommunityResponse, VoteResponse } from '@/types/splashTypes';
+import { getAsync, postAsync } from '@/apis/API';
+import {
+  MusicCommunityResponse,
+  PostVoteData,
+  VoteResponse,
+} from '@/types/splashTypes';
 import { useEffect, useState } from 'react';
 import SplashSelectTemplate from 'src/components/templates/splash/select-template';
 
@@ -74,10 +79,34 @@ const SplashSelect = () => {
   const selectHandler = (id: string) => {
     setSelectedItem(id);
   };
+
+  const getMusicCommunityAsync = async () => {
+    const res = await getAsync<MusicCommunityResponse>(
+      '/onboarding/music/community',
+    );
+    if (res.isSuccess) {
+      return setMusicData(res.result);
+    }
+    return console.log(res.result);
+  };
+
+  const getMusicCommunityVoteRateAsync = async () => {
+    const res = await getAsync<VoteResponse>('/onboarding/music/votes');
+    if (res.isSuccess) {
+      return setVoteData(res.result);
+    }
+    return console.log(res.result);
+  };
+
+  const postMusicCommunityAsync = async () => {
+    const data = {
+      rowEmoji: selectedItem,
+    };
+    const res = await postAsync('/url', data);
+    console.log(data);
+  };
+
   useEffect(() => {
-    // getMusicCommunityAsync('/onboarding/music/community').then((res) =>
-    //   console.log(res),
-    // );
     setMusicData(MUSICDATA);
     setVoteData(VOTEDATA);
   }, []);
@@ -87,6 +116,7 @@ const SplashSelect = () => {
       selectedItem={selectedItem}
       musicData={musicData}
       voteData={voteData}
+      postMusicCommunityAsync={postMusicCommunityAsync}
     />
   );
 };

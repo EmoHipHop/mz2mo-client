@@ -8,14 +8,14 @@ const SplashEmoji = ({
   list,
   selectHandler,
   selectedItem,
-  next,
+  isNext,
   title,
 }: {
   votes: MusicCommunityVote[] | undefined;
   list: VoteList[] | undefined;
   selectHandler: (id: string) => void;
   selectedItem: string;
-  next?: boolean;
+  isNext?: boolean;
   title?: string;
 }) => (
   <style.EmojisWrapper>
@@ -26,11 +26,12 @@ const SplashEmoji = ({
           key={item.emojiId}
           onClick={() => selectHandler(item.emojiId)}
           isSelected={selectedItem === item.emojiId}
+          isNext={isNext ?? false}
         >
           <style.EmojiButton>
             <SampleEmojiSvg width={34} height={34} />
           </style.EmojiButton>
-          {next && list && (
+          {isNext && list && (
             <style.EmojiPercent>{list[idx].percentage} %</style.EmojiPercent>
           )}
         </style.EmojiItem>

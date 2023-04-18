@@ -1,6 +1,10 @@
-import { getAsync } from '@/apis/API';
+import { getAsync, postAsync } from '@/apis/API';
 import type { ApiResult } from '@/types/apiTypes';
-import { MusicCommunityResponse } from '@/types/splashTypes';
+import {
+  MusicCommunityResponse,
+  PostVoteData,
+  VoteResponse,
+} from '@/types/splashTypes';
 
 /**
  * 음악 커뮤니티 조회
@@ -10,3 +14,12 @@ import { MusicCommunityResponse } from '@/types/splashTypes';
 export const getMusicCommunityAsync = async (
   url: string,
 ): ApiResult<MusicCommunityResponse> => getAsync<MusicCommunityResponse>(url);
+
+export const getMusicCommunityVoteRateAsync = async (
+  url: string,
+): ApiResult<VoteResponse> => getAsync<VoteResponse>(url);
+
+export const postMusicCommunityVoteAsync = async (
+  url: string,
+  data: PostVoteData,
+): ApiResult<VoteResponse> => postAsync<VoteResponse, PostVoteData>(url, data);
